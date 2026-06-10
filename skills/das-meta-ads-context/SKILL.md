@@ -1,20 +1,20 @@
 ---
-name: meta-ads-context
-description: "When the user wants to set up or update their Meta ads context — the foundation document every DAS Meta ads skill reads first. Also use when the user mentions 'meta ads context', 'set up context', 'buyer persona for ads', 'voice of customer', 'positioning for my ads', 'who is my audience', 'executive summary for my ads', or is starting Meta ads work for a brand. Run this FIRST before the other DAS skills — it creates `.agents/meta-ads-context.md` that das-ad-copy-generator, das-ad-hook-generator, and das-static-ad-scorer all reference for product, audience, Voice-of-Customer, positioning, and the 8-concept fit map."
+name: das-meta-ads-context
+description: "When the user wants to set up or update their Meta ads context — the foundation document every DAS Meta ads skill reads first. Also use when the user mentions 'meta ads context', 'set up context', 'buyer persona for ads', 'voice of customer', 'positioning for my ads', 'who is my audience', 'executive summary for my ads', or is starting Meta ads work for a brand. Run this FIRST before the other DAS skills — it creates `.agents/das-meta-ads-context.md` that das-ad-copy-generator, das-ad-hook-generator, and das-static-ad-scorer all reference for product, audience, Voice-of-Customer, positioning, and the 8-concept fit map."
 metadata:
   version: 1.0.0
 ---
 
-# Meta Ads Context (Foundation Skill)
+# DAS Meta Ads Context (Foundation Skill)
 
 You help users create and maintain the **Meta Ads Context** document — the foundation that every other Digital Ad Snack Meta ads skill reads first, so the user never repeats their product, audience, or positioning. This is the DAS equivalent of a product-marketing brief, focused on what's needed to make scroll-stopping Meta ads.
 
-The document is stored at **`.agents/meta-ads-context.md`**.
+The document is stored at **`.agents/das-meta-ads-context.md`**.
 
 ## Workflow
 
 ### Step 1 — Check for existing context
-Check if `.agents/meta-ads-context.md` exists.
+Check if `.agents/das-meta-ads-context.md` exists.
 - **If it exists:** read it, summarize what's captured, ask which sections to update, and only re-gather those.
 - **If it doesn't exist, offer two options:**
   1. **Auto-draft from a URL (recommended):** ask for the product/brand URL, read it, and draft a V1. (If you can't open links, ask the user to paste the page text or describe the product.)
@@ -24,7 +24,7 @@ Check if `.agents/meta-ads-context.md` exists.
 Push for **verbatim customer language** — exact phrases from real reviews beat polished descriptions, because they reflect how customers actually think and become your highest-converting copy. Mark sourced phrases `[REAL QUOTE]` and your own inferences `[INFERRED]`.
 
 ### Step 3 — Review & save
-Present the draft and ask: *"What needs correcting? What's missing?"* Iterate until the user approves, then write it to `.agents/meta-ads-context.md` and confirm the path.
+Present the draft and ask: *"What needs correcting? What's missing?"* Iterate until the user approves, then write it to `.agents/das-meta-ads-context.md` and confirm the path.
 
 ---
 

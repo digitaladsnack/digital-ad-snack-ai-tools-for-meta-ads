@@ -12,7 +12,7 @@
   "plugins": [
     {
       "name": "das-meta-ads-skills",
-      "description": "AI skills for Meta (Facebook/Instagram) ads by Digital Ad Snack: a meta-ads-context foundation skill plus ad copy generation across 8 evergreen static ad concepts, a 180+ ad hook generator, and a 26-point static ad creative scorer. Free, works on any AI agent.",
+      "description": "AI skills for Meta (Facebook/Instagram) ads by Digital Ad Snack: a das-meta-ads-context foundation skill plus ad copy generation across 8 evergreen static ad concepts, a 180+ ad hook generator, and a 26-point static ad creative scorer. Free, works on any AI agent.",
       "source": "./"
     }
   ]

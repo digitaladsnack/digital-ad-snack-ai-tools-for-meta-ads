@@ -12,11 +12,11 @@ Skills are markdown files that give an AI agent specialized knowledge and workfl
 
 ## How Skills Work Together
 
-The `meta-ads-context` skill is the **foundation** — every other skill reads it first to understand your product, audience, Voice-of-Customer, and positioning before doing anything. You build it once; every other tool reuses it.
+The `das-meta-ads-context` skill is the **foundation** — every other skill reads it first to understand your product, audience, Voice-of-Customer, and positioning before doing anything. You build it once; every other tool reuses it.
 
 ```
                           ┌────────────────────────────────────────┐
-                          │            meta-ads-context             │
+                          │            das-meta-ads-context             │
                           │     (foundation — read first, always)   │
                           │  product · persona · VoC · positioning  │
                           │         · 8-concept fit map             │
@@ -34,7 +34,7 @@ The `meta-ads-context` skill is the **foundation** — every other skill reads i
       └───────────────────┘          └───────────────────┘          └───────────────────┘
 
    Skills cross-reference each other:
-     meta-ads-context → ad-copy-generator → static-ad-scorer
+     das-meta-ads-context → ad-copy-generator → static-ad-scorer
      ad-hook-generator → ad-copy-generator (hooks become headlines)
 ```
 
@@ -44,10 +44,24 @@ See each skill's **Related Skills** section for the full map. More skills are ad
 
 | Skill | Description |
 |-------|-------------|
-| [meta-ads-context](skills/meta-ads-context/) | **Foundation.** Build a `.agents/meta-ads-context.md` for your brand — product, buyer persona, Voice-of-Customer, positioning, and which of the 8 static ad concepts fit. Run this first. |
+| [das-meta-ads-context](skills/das-meta-ads-context/) | **Foundation.** Build a `.agents/das-meta-ads-context.md` for your brand — product, buyer persona, Voice-of-Customer, positioning, and which of the 8 static ad concepts fit. Run this first. |
 | [das-ad-copy-generator](skills/das-ad-copy-generator/) | Generate ready-to-paste Meta ad copy for the 8 evergreen static ad concepts — headlines, subheadlines, body, features/benefits, CTAs — grounded in your context. |
 | [das-ad-hook-generator](skills/das-ad-hook-generator/) | Generate 32 scroll-stopping ad hooks from a product URL across 4 categories, labeled by type, with the top 5 ranked and explained. |
 | [das-static-ad-scorer](skills/das-static-ad-scorer/) | Score a static ad image against a 26-point Creative Readiness Scorecard before you spend — element breakdown, total, launch verdict, and the top 3 fixes. |
+
+## What each skill does (in plain English)
+
+### 🧭 das-meta-ads-context — *the foundation*
+**Your brand brief for Meta ads, built once and reused by every other tool.** Run it first. It interviews you (or reads your product URL), then saves a `.agents/das-meta-ads-context.md` with your product, buyer persona, the exact words your customers use (Voice-of-Customer), your positioning, and which of the 8 static ad concepts fit you. Every other skill reads it first — so you never repeat yourself. *Based on the DAS Meta ads research framework.*
+
+### ✍️ das-ad-copy-generator
+**Ready-to-paste ad copy for the 8 evergreen static ad concepts.** Pick a concept (Before & After, Us vs. Them, Social Proof, USP, Lo-Fi Social Proof, Product Showcase, Deals/FOMO, Meme) and how many headlines, subheadlines, body texts, and CTAs you want — it generates a copy kit in your brand's voice and flags every line built from real customer reviews with ✓VoC. *Based on the DAS 200+ High Converting Static Meta Ad Templates pack.*
+
+### 🪝 das-ad-hook-generator
+**32 scroll-stopping hooks from a single product URL.** Generates hooks across 4 categories (Product, Problem, Benefit, Solution), each labeled by type (Curiosity, Bold Statement, UGC Review, Social Proof…), with the top 5 ranked and a one-line reason each works. *Based on the DAS 180+ Ad Hook Library.*
+
+### 📊 das-static-ad-scorer
+**Scores your finished ad before you spend a cent.** Upload a static ad image and it grades it on the 8 criteria of a great static ad — Headline, Subheadline, Copy, Visuals, Offer, CTA, plus the 5-Second Rule and the Scroll Test — out of 26 points, with a launch verdict (13+ = ready, 17+ = winner), the top 3 fixes, and one thing it nails. *Based on the DAS Meta Static Ads Creative Readiness Scorecard.*
 
 ## Install — Claude Code (plugin marketplace)
 
@@ -71,7 +85,7 @@ Then just describe what you need — *"set up my meta ads context"*, *"generate 
 1. Open the skill folder you want → open its `SKILL.md`.
 2. Copy the instructions (everything below the frontmatter).
 3. Paste into a new chat in ChatGPT, Claude, Gemini, etc. — or save them as a [Claude Project](https://claude.ai) instruction.
-4. Start with `meta-ads-context` to build your brand brief, then use the other skills.
+4. Start with `das-meta-ads-context` to build your brand brief, then use the other skills.
 
 > The Static Ad Scorer needs an AI that can see images — upload your ad creative when prompted.
 

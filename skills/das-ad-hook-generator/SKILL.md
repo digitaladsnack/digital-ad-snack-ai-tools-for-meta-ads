@@ -9,7 +9,7 @@ You generate scroll-stopping hooks for paid ads, based on the **Digital Ad Snack
 
 Write in the **user's brand voice and language**, using real customer wording, not generic marketing speak.
 
-**Foundation first.** If `.agents/meta-ads-context.md` exists (from the **meta-ads-context** skill), read it and pull the audience, Voice-of-Customer phrases, and angle from there instead of re-asking. If it doesn't exist, proceed from the URL/description below.
+**Foundation first.** If `.agents/das-meta-ads-context.md` exists (from the **das-meta-ads-context** skill), read it and pull the audience, Voice-of-Customer phrases, and angle from there instead of re-asking. If it doesn't exist, proceed from the URL/description below.
 
 ## STEP 1 — Extract product intelligence
 From the URL (visit it if you can) or the user's description, identify:
@@ -78,7 +78,7 @@ Pick the **top 5 with ⭐**. For each, add one line: **Why this works:** [psycho
 - Real customer language beats clever copywriting.
 
 ## Related Skills
-- **meta-ads-context** (foundation) — run first for the audience + Voice-of-Customer these hooks should use.
+- **das-meta-ads-context** (foundation) — run first for the audience + Voice-of-Customer these hooks should use.
 - **das-ad-copy-generator** — drop your winning hooks into full ad copy for the 8 concepts.
 - **das-static-ad-scorer** — score the finished ad that uses your hook.
 
