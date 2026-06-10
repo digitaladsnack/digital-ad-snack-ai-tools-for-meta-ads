@@ -1,67 +1,93 @@
 # Digital Ad Snack — AI Tools for Meta Ads
 
-**Free, open AI skills that help you research, write, and pressure-test Meta (Facebook & Instagram) ads — built by a media buyer who's managed €500k+ in ad spend.**
+**Free, open AI agent skills that help you research, write, and pressure-test Meta (Facebook & Instagram) ads — built by a media buyer who's managed €500k+ in ad spend.**
 
-Made by [Frici Barabas](https://digitaladsnack.com) of **[Digital Ad Snack](https://digitaladsnack.com)** — the newsletter that turns Meta ads strategy into something you can actually use.
+Built by [Frici Barabas](https://digitaladsnack.com), writer of **[Digital Ad Snack](https://digitaladsnack.com)** — the newsletter that turns Meta ads strategy into something you can actually use. Want sharper Meta ads every week? [Subscribe to the newsletter](https://digitaladsnack.com).
 
-These are the same AI tools we bundle with our products, released free for the community. They work as installable [Claude](https://claude.ai) skills **and** as copy-paste prompts in any AI (ChatGPT, Gemini, Grok, Perplexity). No paid tools required.
+These work as installable skills in [Claude Code](https://claude.ai) (and any agent that supports the [Agent Skills spec](https://agentskills.io) — Codex, Cursor, Windsurf), **and** as copy-paste prompts in any AI (ChatGPT, Gemini, Claude, Grok). No paid tools required.
 
----
+## What are Skills?
 
-## 🧰 What's inside
+Skills are markdown files that give an AI agent specialized knowledge and workflows for a task. Add them to your setup and the agent recognizes when you're working on a Meta ads task and applies the right frameworks — instead of generic advice.
 
-| Skill | What it does |
-|---|---|
-| **[das-ad-copy-generator](./das-ad-copy-generator)** | Turns a product URL into a Meta Ads Executive Summary (buyer persona, Voice-of-Customer, positioning), then generates ready-to-paste ad copy for 8 proven static ad concepts. |
-| **[das-ad-hook-generator](./das-ad-hook-generator)** | Generates 32 scroll-stopping ad hooks from a product URL, across 4 categories, labeled by type, with the top 5 ranked and explained. |
-| **[das-static-ad-scorer](./das-static-ad-scorer)** | Scores a static ad image against a 26-point Creative Readiness Scorecard before you spend — element breakdown, total score, launch verdict, and the top 3 fixes. |
+## How Skills Work Together
 
-Each tool is grounded in real direct-response principles and writes in **your** brand's voice — not generic AI fluff.
+The `meta-ads-context` skill is the **foundation** — every other skill reads it first to understand your product, audience, Voice-of-Customer, and positioning before doing anything. You build it once; every other tool reuses it.
 
----
+```
+                          ┌────────────────────────────────────────┐
+                          │            meta-ads-context             │
+                          │     (foundation — read first, always)   │
+                          │  product · persona · VoC · positioning  │
+                          │         · 8-concept fit map             │
+                          └─────────────────────┬──────────────────-┘
+                                                │
+                ┌───────────────────────────────┼───────────────────────────────┐
+                ▼                                ▼                                ▼
+      ┌───────────────────┐          ┌───────────────────┐          ┌───────────────────┐
+      │ das-ad-copy-      │          │ das-ad-hook-      │          │ das-static-ad-    │
+      │ generator         │          │ generator         │          │ scorer            │
+      ├───────────────────┤          ├───────────────────┤          ├───────────────────┤
+      │ ready-to-paste    │          │ 32 scroll-stopping│          │ 26-point creative │
+      │ copy for 8 static │          │ hooks across 4    │          │ readiness score   │
+      │ ad concepts       │          │ categories        │          │ for a finished ad │
+      └───────────────────┘          └───────────────────┘          └───────────────────┘
 
-## 🚀 Install (Claude Code / Claude Desktop)
+   Skills cross-reference each other:
+     meta-ads-context → ad-copy-generator → static-ad-scorer
+     ad-hook-generator → ad-copy-generator (hooks become headlines)
+```
 
-Use them as native skills you can call by name.
+See each skill's **Related Skills** section for the full map. More skills are added over time.
+
+## Available Skills
+
+| Skill | Description |
+|-------|-------------|
+| [meta-ads-context](skills/meta-ads-context/) | **Foundation.** Build a `.agents/meta-ads-context.md` for your brand — product, buyer persona, Voice-of-Customer, positioning, and which of the 8 static ad concepts fit. Run this first. |
+| [das-ad-copy-generator](skills/das-ad-copy-generator/) | Generate ready-to-paste Meta ad copy for the 8 evergreen static ad concepts — headlines, subheadlines, body, features/benefits, CTAs — grounded in your context. |
+| [das-ad-hook-generator](skills/das-ad-hook-generator/) | Generate 32 scroll-stopping ad hooks from a product URL across 4 categories, labeled by type, with the top 5 ranked and explained. |
+| [das-static-ad-scorer](skills/das-static-ad-scorer/) | Score a static ad image against a 26-point Creative Readiness Scorecard before you spend — element breakdown, total, launch verdict, and the top 3 fixes. |
+
+## Install — Claude Code (plugin marketplace)
+
+```
+/plugin marketplace add YOUR-USERNAME/digital-ad-snack-ai-tools-for-meta-ads
+/plugin install das-meta-ads-skills@digital-ad-snack
+```
+
+Or install manually (Claude Code / Claude Desktop / any Agent Skills agent):
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/digital-ad-snack-ai-tools-for-meta-ads.git
-cd digital-ad-snack-ai-tools-for-meta-ads
-
-# Copy the skills into your personal Claude skills folder
 mkdir -p ~/.claude/skills
-cp -R das-ad-copy-generator das-ad-hook-generator das-static-ad-scorer ~/.claude/skills/
+cp -R digital-ad-snack-ai-tools-for-meta-ads/skills/* ~/.claude/skills/
 ```
 
-Restart Claude Code, then just describe what you need — e.g. *"generate meta ad copy for [url]"*, *"give me ad hooks for [url]"*, or *"score my ad"* (attach the image). The matching skill triggers automatically.
+Then just describe what you need — *"set up my meta ads context"*, *"generate meta ad copy for [url]"*, *"give me ad hooks"*, or *"score my ad"* (attach the image). The right skill triggers automatically.
 
-## 💬 Use without Claude Code (any AI — free)
+## Use without an agent (any AI — free)
 
-1. Open the skill folder you want and open its `SKILL.md`.
-2. Copy the instructions (everything below the frontmatter at the top).
-3. Paste them into a new chat in ChatGPT, Claude, Gemini, or any AI — or save them as a [Claude Project](https://claude.ai) instruction so you never paste again.
-4. Give it your product URL (or describe your product) and follow along.
+1. Open the skill folder you want → open its `SKILL.md`.
+2. Copy the instructions (everything below the frontmatter).
+3. Paste into a new chat in ChatGPT, Claude, Gemini, etc. — or save them as a [Claude Project](https://claude.ai) instruction.
+4. Start with `meta-ads-context` to build your brand brief, then use the other skills.
 
 > The Static Ad Scorer needs an AI that can see images — upload your ad creative when prompted.
 
----
+## Who's behind this
 
-## 👋 Who's behind this
+I'm **Frici Barabas** — Meta ads agency owner (10+ years, €500k+ managed, €3M+ generated) and writer of **Digital Ad Snack**, read by performance marketers and DTC operators across Europe.
 
-I'm **Frici Barabas** — Meta ads agency owner (10+ years, €500k+ managed, €3M+ generated) and writer of **Digital Ad Snack**, a newsletter read by performance marketers and DTC operators across Europe.
+- 📰 **Newsletter:** [digitaladsnack.com](https://digitaladsnack.com)
+- 🎨 **200+ High Converting Static Meta Ad Templates** (Canva) + the **180+ Ad Hook Library** and **Creative Readiness Scorecard** → [digitaladsnack.com](https://digitaladsnack.com)
 
-- 📰 **Newsletter:** [digitaladsnack.com](https://digitaladsnack.com) — Meta ads tactics, breakdowns, and tools
-- 🎨 **200+ High Converting Static Meta Ad Templates** (Canva): [digitaladsnack.com](https://digitaladsnack.com)
-- 🪝 **180+ Ad Hook Library** & the full Creative Readiness Scorecard: [digitaladsnack.com](https://digitaladsnack.com)
+If these tools save you time, [subscribe to the newsletter](https://digitaladsnack.com) — that's the best thanks.
 
-If these tools save you time, [subscribe to the newsletter](https://digitaladsnack.com) — that's the best way to say thanks.
+## License
 
----
-
-## 📄 License
-
-MIT — free to use, modify, and share. Attribution to Digital Ad Snack appreciated but not required. See [LICENSE](./LICENSE).
+MIT — free to use, modify, and share. See [LICENSE](./LICENSE).
 
 ---
 
-*Keywords: free AI tools for Meta ads · Facebook ad copy generator · Meta ad hook generator · static ad scorecard · Claude skills for marketers · AI ad copywriting · Meta ads creative · digitaladsnack.com*
+*Keywords: free AI tools for Meta ads · Facebook ad copy generator · Meta ad hook generator · static ad scorecard · Claude skills for marketers · AI ad copywriting · agent skills marketing · Meta ads creative · digitaladsnack.com*

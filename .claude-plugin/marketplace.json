@@ -1,0 +1,19 @@
+{
+  "name": "digital-ad-snack",
+  "owner": {
+    "name": "Frici Barabas",
+    "url": "https://digitaladsnack.com"
+  },
+  "metadata": {
+    "description": "AI tools for Meta ads — buyer persona & context, ad copy generation, hook writing, and creative scoring",
+    "version": "1.0.0",
+    "repository": "https://github.com/YOUR-USERNAME/digital-ad-snack-ai-tools-for-meta-ads"
+  },
+  "plugins": [
+    {
+      "name": "das-meta-ads-skills",
+      "description": "AI skills for Meta (Facebook/Instagram) ads by Digital Ad Snack: a meta-ads-context foundation skill plus ad copy generation across 8 evergreen static ad concepts, a 180+ ad hook generator, and a 26-point static ad creative scorer. Free, works on any AI agent.",
+      "source": "./"
+    }
+  ]
+}

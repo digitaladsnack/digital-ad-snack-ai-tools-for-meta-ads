@@ -9,6 +9,8 @@ Generate Meta ad copy grounded in real audience research, structured around the 
 
 **Pure copy — no paid tools.** Output is text the user pastes into their Canva template manually. Works on any AI account. **The brand voice is the USER's brand**, derived from their URL and answers — never hardcode Digital Ad Snack's voice.
 
+**Foundation first.** Read `.agents/meta-ads-context.md` (created by the **meta-ads-context** skill) for the brand's product, persona, Voice-of-Customer, positioning, and 8-concept fit map. If it doesn't exist, run `meta-ads-context` first — or build it inline via Step 1 below, which produces the same document.
+
 ---
 
 ## How it works — say this up front
@@ -18,8 +20,8 @@ Generate Meta ad copy grounded in real audience research, structured around the 
 > **Step 2 — Copy:** anytime after, tell me which of the 8 concepts you want and how many of each element (headlines, subheadlines, etc.), and I generate a copy kit you paste into your Canva template."
 
 **Routing:**
-- No saved summary yet, or user gives a URL/brand for the first time → **Step 1**.
-- A summary already exists (saved file, or the user pastes one) → skip to **Step 2**.
+- No `.agents/meta-ads-context.md` / no saved summary, or user gives a URL/brand for the first time → **Step 1** (this builds the same context the `meta-ads-context` foundation skill creates).
+- Context already exists (the `.agents/meta-ads-context.md` file, or the user pastes a summary) → skip to **Step 2**.
 
 ---
 
@@ -132,3 +134,11 @@ Angle: [from the fit map]
 - Never leave `[brackets]` unfilled. Write in the user's chosen language.
 - Creative (on-image) and Meta copy must complement, not duplicate each other.
 - The output's brand voice = the user's brand, not DAS.
+
+## Related Skills
+- **meta-ads-context** (foundation) — run first; provides the persona, Voice-of-Customer, and 8-concept fit map this skill relies on.
+- **das-ad-hook-generator** — turn the chosen angle into 32 hook variations.
+- **das-static-ad-scorer** — score the finished ad image before you spend.
+
+---
+*Powered by Digital Ad Snack. More Meta ads insights → https://digitaladsnack.com*

@@ -1,0 +1,12 @@
+{
+  "name": "das-meta-ads-skills",
+  "description": "AI tools for Meta ads by Digital Ad Snack — context foundation, ad copy generation, hook writing, and creative scoring",
+  "version": "1.0.0",
+  "author": {
+    "name": "Frici Barabas"
+  },
+  "homepage": "https://digitaladsnack.com",
+  "repository": "https://github.com/YOUR-USERNAME/digital-ad-snack-ai-tools-for-meta-ads",
+  "license": "MIT",
+  "skills": "./skills"
+}
