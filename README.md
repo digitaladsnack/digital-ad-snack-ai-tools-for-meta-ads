@@ -49,19 +49,30 @@ See each skill's **Related Skills** section for the full map. More skills are ad
 | [das-ad-hook-generator](skills/das-ad-hook-generator/) | Generate 32 scroll-stopping ad hooks from a product URL across 4 categories, labeled by type, with the top 5 ranked and explained. |
 | [das-static-ad-scorer](skills/das-static-ad-scorer/) | Score a static ad image against a 26-point Creative Readiness Scorecard before you spend — element breakdown, total, launch verdict, and the top 3 fixes. |
 
-## What each skill does (in plain English)
+## What each skill does
 
 ### 🧭 das-meta-ads-context — *the foundation*
-**Your brand brief for Meta ads, built once and reused by every other tool.** Run it first. It interviews you (or reads your product URL), then saves a `.agents/das-meta-ads-context.md` with your product, buyer persona, the exact words your customers use (Voice-of-Customer), your positioning, and which of the 8 static ad concepts fit you. Every other skill reads it first — so you never repeat yourself. *Based on the DAS Meta ads research framework.*
+**Your brand brief for Meta ads, built once and reused by every other tool.** Run it first. It interviews you (or reads your product URL), then saves a `.agents/das-meta-ads-context.md` capturing your product, buyer persona, the exact words your customers use (Voice-of-Customer), your positioning, your offer, and which of the 8 static ad concepts fit you best. Every other skill reads this file first — so your copy, hooks, and scores are grounded in your real audience instead of generic AI guesses, and you never repeat yourself. *Based on the Digital Ad Snack Meta ads research framework.*
 
 ### ✍️ das-ad-copy-generator
-**Ready-to-paste ad copy for the 8 evergreen static ad concepts.** Pick a concept (Before & After, Us vs. Them, Social Proof, USP, Lo-Fi Social Proof, Product Showcase, Deals/FOMO, Meme) and how many headlines, subheadlines, body texts, and CTAs you want — it generates a copy kit in your brand's voice and flags every line built from real customer reviews with ✓VoC. *Based on the DAS 200+ High Converting Static Meta Ad Templates pack.*
+**This copywriter skill creates ready-to-paste copy for the 8 evergreen static ad concepts.** Tell it which concept you want and how many headlines, subheadlines, body texts, features/benefits, and CTAs — it returns a full copy kit in your brand's voice, flagging every line drawn from real customer reviews with ✓VoC (usually the strongest performers). The 8 concepts:
+
+1. **Before & After / Transformation**
+2. **Us vs. Them (Comparison)**
+3. **Social Proof (Testimonials, Reviews, Ratings)**
+4. **USP / Core Benefit / Feature-Led**
+5. **Lo-Fi Social Proof (UGC, PR, Comments, Screenshots)**
+6. **Product Showcase / Collage**
+7. **Deals / Promotions / FOMO**
+8. **Meme / Humor / Trends / Behind-the-Scenes**
+
+Built to pair with the Canva templates it's based on → **[200+ High Converting Static Meta Ad Templates](https://digitaladsnack.com/high-converting-meta-ad-templates)**. Generate the copy here, paste it straight into the matching template.
 
 ### 🪝 das-ad-hook-generator
-**32 scroll-stopping hooks from a single product URL.** Generates hooks across 4 categories (Product, Problem, Benefit, Solution), each labeled by type (Curiosity, Bold Statement, UGC Review, Social Proof…), with the top 5 ranked and a one-line reason each works. *Based on the DAS 180+ Ad Hook Library.*
+**32 scroll-stopping hooks from a single product URL.** The hook is the first line — the one that stops the scroll. This skill generates 32 hooks across 4 categories (Product-, Problem-, Benefit-, and Solution-focused), each labeled by type (Curiosity, Bold Statement, UGC Review, Social Proof, Problem-Agitation, Aspirational…), then ranks the top 5 with a one-line reason each works. Built on the **[Digital Ad Snack 180+ Ad Hook Library →](https://e.pcloud.link/publink/show?code=XZVdkcZe8497V3cqdFkfQOzP7ko2y6jfzrk)**
 
 ### 📊 das-static-ad-scorer
-**Scores your finished ad before you spend a cent.** Upload a static ad image and it grades it on the 8 criteria of a great static ad — Headline, Subheadline, Copy, Visuals, Offer, CTA, plus the 5-Second Rule and the Scroll Test — out of 26 points, with a launch verdict (13+ = ready, 17+ = winner), the top 3 fixes, and one thing it nails. *Based on the DAS Meta Static Ads Creative Readiness Scorecard.*
+**Scores your finished ad before you spend a cent.** Upload a static ad image and it grades it against the 8 criteria of a high-converting static ad — Headline/Hook, Subheadline, Additional Copy, Visuals, Offer, CTA, plus the 5-Second Rule and the Scroll Test — for a total out of 26, a clear launch verdict (13+ = ready to launch, 17+ = strong winner), the top 3 improvements ranked by impact, and one thing it already nails. Built on the **[Digital Ad Snack Meta Static Ads Creative Readiness Scorecard →](https://e.pcloud.link/publink/show?code=XZ0TevZdkYCqSqjvX4RHxHHQvQciz81FYek)**
 
 ## Install — Claude Code (plugin marketplace)
 
