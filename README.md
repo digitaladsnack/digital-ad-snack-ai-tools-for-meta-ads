@@ -77,14 +77,14 @@ Built to pair with the Canva templates it's based on → **[200+ High Converting
 ## Install — Claude Code (plugin marketplace)
 
 ```
-/plugin marketplace add YOUR-USERNAME/digital-ad-snack-ai-tools-for-meta-ads
+/plugin marketplace add digitaladsnack/digital-ad-snack-ai-tools-for-meta-ads
 /plugin install das-meta-ads-skills@digital-ad-snack
 ```
 
 Or install manually (Claude Code / Claude Desktop / any Agent Skills agent):
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/digital-ad-snack-ai-tools-for-meta-ads.git
+git clone https://github.com/digitaladsnack/digital-ad-snack-ai-tools-for-meta-ads.git
 mkdir -p ~/.claude/skills
 cp -R digital-ad-snack-ai-tools-for-meta-ads/skills/* ~/.claude/skills/
 ```

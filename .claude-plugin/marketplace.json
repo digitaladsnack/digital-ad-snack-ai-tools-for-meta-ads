@@ -7,7 +7,7 @@
   "metadata": {
     "description": "AI tools for Meta ads — buyer persona & context, ad copy generation, hook writing, and creative scoring",
     "version": "1.0.0",
-    "repository": "https://github.com/YOUR-USERNAME/digital-ad-snack-ai-tools-for-meta-ads"
+    "repository": "https://github.com/digitaladsnack/digital-ad-snack-ai-tools-for-meta-ads"
   },
   "plugins": [
     {
