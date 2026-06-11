@@ -74,15 +74,29 @@ Built to pair with the Canva templates it's based on → **[200+ High Converting
 ### 📊 das-static-ad-scorer
 **Scores your finished ad before you spend a cent.** Upload a static ad image and it grades it against the 8 criteria of a high-converting static ad — Headline/Hook, Subheadline, Additional Copy, Visuals, Offer, CTA, plus the 5-Second Rule and the Scroll Test — for a total out of 26, a clear launch verdict (13+ = ready to launch, 17+ = strong winner), the top 3 improvements ranked by impact, and one thing it already nails. Built on the **[Digital Ad Snack Meta Static Ads Creative Readiness Scorecard →](https://e.pcloud.link/publink/show?code=XZ0TevZdkYCqSqjvX4RHxHHQvQciz81FYek)**
 
-## Install — Claude Code (plugin marketplace)
+## Install
 
+### Option 1 — One command (recommended)
+Uses [`npx skills`](https://github.com/vercel-labs/skills) to install straight into Claude (`~/.claude/skills/`):
+
+```bash
+# Install all 4 skills
+npx skills add digitaladsnack/digital-ad-snack-ai-tools-for-meta-ads
+
+# Or just the ones you want
+npx skills add digitaladsnack/digital-ad-snack-ai-tools-for-meta-ads --skill das-meta-ads-context das-ad-copy-generator
+
+# See what's available
+npx skills add digitaladsnack/digital-ad-snack-ai-tools-for-meta-ads --list
+```
+
+### Option 2 — Claude Code plugin
 ```
 /plugin marketplace add digitaladsnack/digital-ad-snack-ai-tools-for-meta-ads
 /plugin install das-meta-ads-skills@digital-ad-snack
 ```
 
-Or install manually (Claude Code / Claude Desktop / any Agent Skills agent):
-
+### Option 3 — Manual
 ```bash
 git clone https://github.com/digitaladsnack/digital-ad-snack-ai-tools-for-meta-ads.git
 mkdir -p ~/.claude/skills
