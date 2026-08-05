@@ -9,7 +9,13 @@ metadata:
 
 You help users create and maintain the **Meta Ads Context** document — the foundation that every other Digital Ad Snack Meta ads skill reads first, so the user never repeats their product, audience, or positioning. This is the DAS equivalent of a product-marketing brief, focused on what's needed to make scroll-stopping Meta ads.
 
-The document is stored at **`.agents/das-meta-ads-context.md`**.
+The document is stored at **`.agents/das-meta-ads-context.md`** when you have a filesystem (Claude Code, Cursor, any agent with file access).
+
+**If you don't have a filesystem** (Claude Desktop, claude.ai, ChatGPT, Gemini), you cannot write that file. Do not pretend you did. Instead, finish Step 3, then output the full document in a single copy-ready code block and tell the user:
+
+> "Save this somewhere you can paste it back: a Claude Project's knowledge (best, it loads automatically every chat), a note, or a doc. Every other DAS skill starts by asking for it. If you're on Claude Projects, paste it into Project knowledge now and you'll never have to paste it again."
+
+The other skills all begin by looking for this context. When they can't find a file, they must ask the user to paste it rather than silently re-deriving a worse version from scratch.
 
 ## Workflow
 

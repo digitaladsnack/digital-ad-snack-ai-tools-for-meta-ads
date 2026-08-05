@@ -11,6 +11,8 @@ Write in the **user's brand voice and language**, using real customer wording, n
 
 **Foundation first.** If `.agents/das-meta-ads-context.md` exists (from the **das-meta-ads-context** skill), read it and pull the audience, Voice-of-Customer phrases, Awareness Map, and angle from there instead of re-asking. If it doesn't exist, proceed from the URL/description below.
 
+**No filesystem?** On Claude Desktop, claude.ai, ChatGPT or Gemini there is no `.agents/` file to read. Ask the user to paste their saved Meta Ads Context (or attach it to the Project), and work from that. Never silently skip it and re-derive a thinner version from scratch, the whole point of the foundation is that it is built once and reused.
+
 **Awareness drives the hook.** A hook only works if it meets the reader where they are. Someone who doesn't know they have a problem will skip "Save 30% on X" without seeing it. Read `das-meta-ads-context/references/awareness-levels.md` (or the Awareness Map in the context file) before generating, and tag every hook with the level it's built for. The 4 categories map roughly onto the levels, which is why generating all four gives you full-funnel coverage:
 
 | Category | Usually lands at |

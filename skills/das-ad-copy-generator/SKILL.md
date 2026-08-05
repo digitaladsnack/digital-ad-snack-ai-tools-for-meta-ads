@@ -11,6 +11,8 @@ Generate Meta ad copy grounded in real audience research, structured around the 
 
 **Foundation first.** Read `.agents/das-meta-ads-context.md` (created by the **das-meta-ads-context** skill) for the brand's product, persona, Voice-of-Customer, positioning, Awareness Map, and awareness x concept map. If it doesn't exist, run `das-meta-ads-context` first — or build it inline via Step 1 below, which produces the same document.
 
+**No filesystem?** On Claude Desktop, claude.ai, ChatGPT or Gemini there is no `.agents/` file to read. Ask the user to paste their saved Meta Ads Context (or attach it to the Project), and work from that. Never silently skip it and re-derive a thinner version from scratch, the whole point of the foundation is that it is built once and reused.
+
 **Awareness sets the depth.** The same concept written for an Unaware reader and a Most Aware reader are different ads. Before generating, read `das-meta-ads-context/references/awareness-levels.md` and let the target level decide copy length, when the product enters, and how hard the CTA pushes:
 
 | Level | Primary text | Where the product enters | CTA |

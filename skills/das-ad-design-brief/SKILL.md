@@ -15,6 +15,8 @@ This is the step most small advertisers get stuck on. They can describe their pr
 
 **Foundation first.** Read `.agents/das-meta-ads-context.md` (from **das-meta-ads-context**) for the brand, positioning, proof, awareness map, and brand guardrails. Read `das-meta-ads-context/references/awareness-levels.md` for the per-level design cues. Read `references/concept-layouts.md` in this skill for the 8 layout blueprints.
 
+**No filesystem?** On Claude Desktop, claude.ai, ChatGPT or Gemini there is no `.agents/` file to read. Ask the user to paste their saved Meta Ads Context (or attach it to the Project), and work from that. Never silently skip it and re-derive a thinner version from scratch, the whole point of the foundation is that it is built once and reused.
+
 ---
 
 ## Inputs to collect
