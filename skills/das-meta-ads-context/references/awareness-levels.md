@@ -202,13 +202,15 @@ The product is in every row. The CTA is in every row. Only the timing and the pr
 
 Most small advertisers own levels 4 and 5 and nothing else. That is the gap worth closing first.
 
-A balanced 5-ad batch for a cold-start account:
+**The default batch is one ad per level.** Five ads, L1 through L5:
 
-1. One Level 1 or 2 ad (pattern interrupt or problem mirror) to feed the algorithm cheap attention
-2. One Level 2 ad (problem mirror, lo-fi)
-3. One Level 3 ad (contrast or transformation)
-4. One Level 4 ad (the single differentiator)
-5. One Level 5 ad (offer plus proof) for anyone already close
+1. **L1** pattern interrupt, to buy cheap attention from the ~70% who aren't looking
+2. **L2** problem mirror, lo-fi, naming the frustration for them
+3. **L3** contrast or transformation, against the wrong approach
+4. **L4** the single differentiator, one big claim
+5. **L5** offer plus proof, for anyone already close
+
+For batches other than five, spread evenly and put the extras where the brand's Awareness Map says its gap is. That is almost always L1 and L2, because brands arrive already over-serving L4 and L5.
 
 Run them in one ad set and let Meta decide who sees what. You are not building an awareness funnel with separate campaigns, you are giving the algorithm a full range of signals to match against people at different distances from buying.
 

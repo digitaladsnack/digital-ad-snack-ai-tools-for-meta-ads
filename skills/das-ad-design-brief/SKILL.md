@@ -38,6 +38,8 @@ State each pick in one line with the reason. If the user names a concept themsel
 Ask only for what you don't have. One message, batched.
 
 1. **Who the ads are for, and how many.** If they don't know the awareness levels, ask *"Are these for people who've never thought about this problem, people comparing their options, or people ready to buy?"* and map it yourself.
+
+   **Default: one ad per awareness level.** If they ask for ads without naming an audience ("give me 5 ad concepts"), build the balanced batch, one ad each at L1 through L5, and say that's what you did. Don't stop to ask. A spread across all five levels is the right answer for almost any account starting out, because most brands arrive already over-serving L4 and L5. For counts other than five, spread as evenly as you can and put the extras at the levels the brand's Awareness Map flags as its biggest gap.
 2. **The copy**, if `das-ad-copy-generator` has already run. If not, write the minimum needed per ad yourself: headline, any on-image support line, and the CTA.
 3. **What visual assets exist**: product photos, customer photos, review screenshots, nothing. This changes which concepts qualify, so ask it before selecting.
 
