@@ -159,6 +159,31 @@ Eugene Schwartz mapped these in *Breakthrough Advertising* (1966). They describe
 
 ---
 
+## How to CHOOSE the concept (do not ask the user)
+
+**The user names an awareness level and a number of ads. You name the concepts.** Picking between 8 concepts is an expertise question, and the person running a 50 EUR a day account does not have that expertise. That is the whole reason they are using these skills. Asking "which of the 8 concepts would you like?" hands the hardest decision back to them.
+
+Given a level and a count, select concepts like this:
+
+**Step 1.** From the matrix above, take every concept marked ✅ for that level. Add the ⚠️ ones as backup.
+
+**Step 2.** Filter against the brand's own fit map in `.agents/das-meta-ads-context.md`. Drop anything the brand marked `skip`, and drop anything it lacks the assets or proof for (no reviews means no Social Proof, no product photos means no Product Showcase).
+
+**Step 3.** Rank what survives:
+1. matrix ✅ + brand ✅
+2. matrix ✅ + brand ⚠️
+3. matrix ⚠️ + brand ✅
+
+**Step 4.** If they asked for more ads than there are qualifying concepts, do NOT reach down into `skip` territory. Reuse the top-ranked concept with a different **variation lever** instead (see each concept's "Variation levers" in `concept-copy-frameworks.md` and `concept-layouts.md`). Two strong Lo-Fi ads built on different formats beat one strong ad and one wrong-tool ad.
+
+**Step 5.** State each choice in one line with the reason, then get on with the work:
+
+> "For 5 ads at Unaware, I'm using: two Lo-Fi Social Proof (different formats, this is the strongest L1 fit for you), two Meme/BTS, and one Before & After framed educationally. Skipping Deals and USP entirely, nobody at this level knows they have the problem yet."
+
+**Overrides.** If the user names a concept, use it. If it's marked `skip` for that level, build it anyway and flag the mismatch once, in one line, then continue.
+
+---
+
 ## Product entry and CTA at a glance
 
 | Level | Copy length | Product in the visual | Product in the copy | CTA |

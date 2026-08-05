@@ -1,31 +1,39 @@
 # das-ad-design-brief 🎨
 
-**You have the copy. Now what does the ad actually look like?**
+**Which of the 8 ad concepts should you use? Stop guessing.**
 
 ## What it does
-This is the step that stops most small advertisers. They can describe their product, they can even write decent copy, and then they freeze at the picture and end up with a stock photo and a logo.
+You say *"give me 5 ad concepts for people who don't know they have this problem."* It picks the concepts and writes the briefs.
 
-Give it a concept, an awareness level, and your copy. It gives you a **build-ready design brief**:
+Choosing between Before & After, Us vs. Them, Social Proof, USP, Lo-Fi, Product Showcase, Deals and Meme is the hardest call in creative strategy, and it's the one every other tool hands back to you. This skill makes it, using your awareness level, your brand's fit map, and the visual assets you actually have.
 
-- 🗺️ **Layout blueprint** — which element sits in which zone of the 4:5 canvas
-- 👁️ **Visual hierarchy** — what the eye reads at 0.5s, 2s, and 3s
-- 📸 **Shot list** — the exact photo you need, and how to take it on a phone (plus a no-photo fallback for every concept)
-- 🔠 **Type & colour rules** — sizes, contrast, and the thing that breaks at thumbnail size
-- 📍 **Text placement map** — your actual copy lines assigned to zones, shortened where they don't fit
-- 🛠️ **Build steps** — free Canva, from scratch, or from a ready-made template
+Each brief gives a designer everything they need and nothing they don't:
 
-Every instruction is executable by someone holding a phone in their kitchen. "Shoot the product on a white bedsheet by a window, no flash, from slightly above" is a brief. "Lifestyle imagery" is not.
+- **The concept**, and one line on why it fits
+- **The awareness level**, and what that reader already knows
+- **The core message** in one sentence
+- **The copy that goes on the image** — headline, support line, CTA
+- **The visual direction** — what we see and the mood
+- **The layout** — structure in words
+- **What to avoid** — how this concept fails at this awareness level
+
+No pixel dimensions, no font sizes, no software tutorials. A brief describes the ad. How it gets made is the designer's job.
+
+## Why awareness changes the brief
+A Before & After for someone who's never thought about the problem and a Before & After for someone ready to buy are different ads. The awareness level decides how much copy goes on the image, when the product enters, how hard the CTA pushes, and whether the ad should look polished or deliberately unpolished.
+
+Concept sets the structure. Awareness sets the tone. The brief reconciles both.
 
 ## How to use
-Run [das-meta-ads-context](../das-meta-ads-context) first, then [das-ad-copy-generator](../das-ad-copy-generator) to get your copy kit. Then say *"design brief for the Before & After ad"* or just *"I have copy but no design"*.
+Run [das-meta-ads-context](../das-meta-ads-context) first. Then say *"create 5 ad concepts for unaware"* or *"one ad per awareness level"*.
 
-Works with free Canva and a phone camera. No designer, no agency, no paid tools.
+Have [das-ad-copy-generator](../das-ad-copy-generator) run first if you want the real copy in the briefs. If you haven't, this skill writes the minimum needed.
 
-## Based on
-The layout blueprints for all 8 evergreen static ad concepts, plus the Schwartz awareness-level design cues. Don't want to build layouts from scratch? The **[200+ High Converting Static Meta Ad Templates →](https://digitaladsnack.com)** pack has editable Canva templates for all 8 concepts in 4:5.
+## Then build them
+Hand the briefs to your designer, or build them yourself. If you'd rather not start from a blank canvas, the **[200+ High Converting Static Meta Ad Templates →](https://digitaladsnack.com)** pack has editable Canva templates for all 8 concepts in 4:5.
 
 ## Related skills
-- [das-meta-ads-context](../das-meta-ads-context) (run first) · [das-ad-hook-generator](../das-ad-hook-generator) · [das-ad-copy-generator](../das-ad-copy-generator) (get the copy first) · [das-static-ad-scorer](../das-static-ad-scorer) (score it before you spend)
+- [das-meta-ads-context](../das-meta-ads-context) (run first) · [das-ad-hook-generator](../das-ad-hook-generator) · [das-ad-copy-generator](../das-ad-copy-generator) · [das-static-ad-scorer](../das-static-ad-scorer) (score it before you spend)
 
 ---
 Part of **[Digital Ad Snack — AI Tools for Meta Ads](../../)**. More Meta ads tactics → **[digitaladsnack.com](https://digitaladsnack.com)**

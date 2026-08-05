@@ -51,7 +51,11 @@ Levels: L1 Unaware / L2 Problem-Aware / L3 Solution-Aware / L4 Product-Aware / L
 
 Then pick the **top 5 with ⭐, one per awareness level**. Not the 5 punchiest hooks overall. Left to rank freely you will pick five L4/L5 hooks, because bold product claims read strongest in isolation, and the user will launch five ads that all talk to the 3% already ready to buy. One per level gives them a batch that covers the whole audience.
 
-For each, add one line: **Why this works:** [psychological trigger, 1 sentence].
+For each of the 5, give:
+- **Why this works:** [psychological trigger, 1 sentence]
+- **Build it as:** [which of the 8 concepts this hook should become]
+
+**Assign the concept yourself.** Use the selection rule in `das-meta-ads-context/references/awareness-levels.md`: the ✅ concepts for that level, filtered against the brand's fit map and the assets it actually has. Never hand the user a hook and leave them wondering what kind of ad to make out of it. The top 5 should read as a ready launch plan, hook plus concept plus level, five rows.
 
 If a level has no usable hook (some products genuinely can't do L1 humour), say so explicitly rather than forcing a weak one, and name the level that should absorb that ad instead.
 

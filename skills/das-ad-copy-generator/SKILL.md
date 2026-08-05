@@ -1,6 +1,6 @@
 ---
 name: das-ad-copy-generator
-description: Generate high-converting Meta ad copy from a product/brand URL, structured around the 8 evergreen static ad concepts in the Digital Ad Snack template pack. A 2-step flow — Step 1 builds a Meta Ads Executive Summary (audience, buyer persona, Voice-of-Customer, positioning, 8-concept fit map) which the user reviews, approves, and saves; Step 2 asks which of the 8 concepts and how many of each element (headlines, subheadlines, body, features/benefits, reviews, CTAs), then generates a ready-to-paste copy kit the user drops into the Canva template by hand. Pure text — works on any free AI account, no paid tools. Use whenever the user wants Meta/Facebook ad copy from a URL, a buyer persona / audience summary for ads, or headlines/subheadlines/body/features for any of the 8 ad concepts. Triggers on: "ad copy generator", "generate meta ad copy", "ad copy from url", "before/after copy", "write meta ads for [url]", "executive summary for my ads", "headlines for my ad".
+description: Generate high-converting Meta ad copy from a product/brand URL, structured around the 8 evergreen static ad concepts in the Digital Ad Snack template pack. A 2-step flow — Step 1 builds a Meta Ads Executive Summary (audience, buyer persona, Voice-of-Customer, positioning, the 5 problem awareness levels, awareness x concept map) which the user reviews, approves, and saves; Step 2 asks only for an awareness level and how many ads, then CHOOSES the concepts itself and generates a ready-to-paste copy kit the user drops into the Canva template by hand. The user never has to pick between the 8 concepts. Pure text — works on any free AI account, no paid tools. Use whenever the user wants Meta/Facebook ad copy from a URL, copy for an audience or awareness level, a buyer persona / audience summary for ads, or headlines/subheadlines/body/features for ads. Triggers on: "ad copy generator", "generate meta ad copy", "ad copy from url", "copy for 5 ads", "ads for unaware audience", "before/after copy", "write meta ads for [url]", "executive summary for my ads", "headlines for my ad".
 ---
 
 # DAS Ad Copy Generator
@@ -31,7 +31,7 @@ Generate Meta ad copy grounded in real audience research, structured around the 
 
 > "This works in 2 steps.
 > **Step 1 — Executive Summary:** I research your brand from a URL (or details you paste) and build a Meta Ads Executive Summary — who your buyer is, the words they use, your positioning, and which of the 8 ad concepts fit you best. You review and tweak it, then we save it.
-> **Step 2 — Copy:** anytime after, tell me which of the 8 concepts you want and how many of each element (headlines, subheadlines, etc.), and I generate a copy kit you paste into your Canva template."
+> **Step 2 — Copy:** anytime after, just tell me who the ads are for and how many you want (for example *'5 ads for people who don't know they have this problem'*). I pick which ad concepts fit, and generate a copy kit you paste into your Canva template."
 
 **Routing:**
 - No `.agents/das-meta-ads-context.md` / no saved summary, or user gives a URL/brand for the first time → **Step 1** (this builds the same context the `das-meta-ads-context` foundation skill creates).
@@ -104,9 +104,18 @@ Rules: every detail specific enough to write an ad from. Mark sourced quotes `[R
 
 1. Load the saved Executive Summary (from `summaries/<brand-slug>.md`, or one the user pasted). If none exists, run Step 1 first.
 
-2. **Ask which concept and which awareness level** (if not stated): list the 8 and note which the fit map recommends, each with the level it's aimed at. Default to Before & After at L3 Solution-Aware if the user just says "go".
+2. **Ask for the awareness level and a count, then choose the concepts yourself.**
 
-   If the user asks for a concept at a level the matrix marks `skip` (for example Deals/FOMO at L1 Unaware), build it anyway but open with one line naming the mismatch and what it will cost them: *"Heads up: a discount ad shown to people who don't know they have this problem gets scrolled past. This copy works, but it belongs on a warm audience. Want an L1 version too?"* State it once, then get on with the work.
+   The user says *"copy for 5 ads at Unaware"* or *"one ad per level"*. They do not say which concept, and you must not ask. Selecting among 8 concepts is the expertise they came here to borrow. Apply the selection rule in `das-meta-ads-context/references/awareness-levels.md`: take the ✅ concepts for that level, filter against the brand's fit map and the assets and proof it actually has, rank, and if they want more ads than there are qualifying concepts, reuse the top one with a different variation lever rather than dropping into `skip` territory.
+
+   If they don't know what awareness levels are, don't lecture them. Ask *"Are these for people who've never heard of the problem, people comparing options, or people ready to buy?"* and map the answer yourself.
+
+   Announce the picks in one line each, then write:
+   > "For 5 ads at Unaware I'm using two Lo-Fi Social Proof (different formats), two Meme/BTS, and one Before & After framed educationally. Skipping Deals and USP, nobody here knows they have the problem yet."
+
+   If the user does name a concept, use it. If it's marked `skip` for that level, build it anyway and flag the mismatch once: *"Heads up: a discount ad shown to people who don't know they have this problem gets scrolled past. This copy works, but it belongs on a warm audience."* Say it once, then get on with the work.
+
+   Default if they just say "go": one ad per awareness level, concepts chosen by the rule above.
 
 3. **Ask how many of each element.** Open `references/concept-copy-frameworks.md`, find that concept's element list, and ask the user for quantities — offer sensible defaults so they can just say "defaults". Example for Before & After:
    > "How many of each do you want? (or say 'defaults')

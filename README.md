@@ -46,7 +46,7 @@ See each skill's **Related Skills** section for the full map. More skills are ad
 | [das-meta-ads-context](skills/das-meta-ads-context/) | **Foundation.** Build a `.agents/das-meta-ads-context.md` for your brand — product, buyer persona, Voice-of-Customer, positioning, the 5 problem awareness levels, and which of the 8 static ad concepts fit at each level. Run this first. |
 | [das-ad-hook-generator](skills/das-ad-hook-generator/) | Generate 32 scroll-stopping ad hooks from a product URL across 4 categories, labeled by type **and awareness level**, with a top 5 that gives you one hook per level instead of five aimed at the same buyer. |
 | [das-ad-copy-generator](skills/das-ad-copy-generator/) | Generate ready-to-paste Meta ad copy for the 8 evergreen static ad concepts — headlines, subheadlines, body, features/benefits, CTAs — with length, product placement, and CTA pressure set by the awareness level you're targeting. |
-| [das-ad-design-brief](skills/das-ad-design-brief/) | Turn copy into a build-ready design brief — layout blueprint, visual hierarchy, phone-shootable shot list, type and contrast rules, and a text placement map. For everyone who has copy but no designer. |
+| [das-ad-design-brief](skills/das-ad-design-brief/) | Picks **which of the 8 concepts** each ad should be, based on awareness level and the assets you have, then writes a designer-ready brief for each: core message, on-image copy, visual direction, layout, and what to avoid. |
 | [das-static-ad-scorer](skills/das-static-ad-scorer/) | Score a static ad image against a 26-point Creative Readiness Scorecard before you spend — element breakdown, total, launch verdict, and the top 3 fixes. |
 
 ## What each skill does
@@ -85,11 +85,11 @@ Built to pair with the Canva templates it's based on → **[200+ High Converting
 **32 scroll-stopping hooks from a single product URL.** The hook is the first line — the one that stops the scroll. This skill generates 32 hooks across 4 categories (Product-, Problem-, Benefit-, and Solution-focused), each labeled by type (Curiosity, Bold Statement, UGC Review, Social Proof, Problem-Agitation, Aspirational…), then ranks the top 5 with a one-line reason each works. Built on the **[Digital Ad Snack 180+ Ad Hook Library →](https://e.pcloud.link/publink/show?code=XZVdkcZe8497V3cqdFkfQOzP7ko2y6jfzrk)**
 
 ### 🎨 das-ad-design-brief
-**The step where most small advertisers freeze.** You can describe your product. You can write decent copy. Then you hit "what does the actual picture look like?" and end up with a stock photo and a logo.
+**Which of the 8 concepts should this ad be?** That's the hardest call in creative strategy, and every other tool hands it back to you.
 
-Give it a concept, an awareness level, and your copy. It returns a build-ready brief: a **layout blueprint** (which element sits in which zone of the 4:5 canvas), the **visual hierarchy** (what the eye reads at 0.5s, 2s, 3s), a **shot list** with phone-camera instructions and a no-photo fallback for every concept, **type and contrast rules**, and a **text placement map** that assigns your actual copy lines to zones and shortens the ones that don't fit. Then the build steps for free Canva.
+Say *"give me 5 ad concepts for people who don't know they have this problem"* and it picks the concepts itself, using your awareness level, your brand's fit map, and the visual assets you actually have. Then it writes a designer-ready brief for each: the concept and why it fits, the awareness level, the core message, the copy that goes on the image, the visual direction, the layout in words, and how that concept fails at that awareness level.
 
-Every instruction is executable by someone holding a phone in their kitchen. *"Shoot the product on a white bedsheet by a window, no flash, from slightly above"* is a brief. *"Lifestyle imagery"* is not.
+No pixel dimensions, no font sizes, no software tutorials. A brief describes the ad. How it gets made is your designer's job, or the template pack's.
 
 ### 📊 das-static-ad-scorer
 **Scores your finished ad before you spend a cent.** Upload a static ad image and it grades it against the 8 criteria of a high-converting static ad — Headline/Hook, Subheadline, Additional Copy, Visuals, Offer, CTA, plus the 5-Second Rule and the Scroll Test — for a total out of 26, a clear launch verdict (13+ = ready to launch, 17+ = strong winner), the top 3 improvements ranked by impact, and one thing it already nails. Built on the **[Digital Ad Snack Meta Static Ads Creative Readiness Scorecard →](https://e.pcloud.link/publink/show?code=XZ0TevZdkYCqSqjvX4RHxHHQvQciz81FYek)**
@@ -165,10 +165,10 @@ You get 32, plus a top five with **one hook per awareness level**. Those five ar
 **3. Write the copy (~30 min).** For each of the five, type:
 > *"Write the copy for the [concept] ad at [awareness level]"*
 
-**4. Get the design brief (~20 min).** For each ad, type:
-> *"Design brief for that ad"*
+**4. Get the design briefs (~15 min).** Type:
+> *"Create 5 ad concepts for [who they're for]"*
 
-You get the layout, the photo you need (and how to shoot it on a phone), and where every line of copy goes. Build it in free Canva.
+It picks which of the 8 concepts each ad should be and briefs each one: core message, the copy on the image, the visual, the layout. Hand them to a designer, or build them yourself.
 
 **5. Score before you spend (~10 min).** Upload each finished image:
 > *"Score my ad"*

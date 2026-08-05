@@ -1,173 +1,133 @@
-# Layout Blueprints — the 8 Evergreen Static Ad Concepts
+# The 8 Evergreen Static Ad Concepts — structure and visual direction
 
-One blueprint per concept, on a **4:5 canvas (1080 x 1350 px)**. Each gives the zone map, the visual hierarchy, the image requirement, and the mistake that kills that concept.
+What each concept **is**, what it **needs**, and how it **fails**. Use this to write briefs, not build files. No measurements here on purpose: a brief describes the ad, the designer decides the millimetres.
 
-Zones run top to bottom. Percentages are of canvas height and are a starting point, not a rule.
-
-The awareness level decides the *style* of what you build (polished vs. lo-fi, loud vs. quiet). This file decides the *structure*. Reconcile both. See `das-meta-ads-context/references/awareness-levels.md` for the style cues.
+Awareness decides the *tone* of every one of these (polished vs. deliberately unpolished, quiet vs. loud, product early vs. product late). See `das-meta-ads-context/references/awareness-levels.md`. Concept sets the structure, awareness sets the tone.
 
 ---
 
 ## 1. Before & After / Transformation
 
-**Zones**
-- Top 15%: Headline, the transformation promise
-- Middle 60%: Split image. Left = before, right = after. Or top/bottom split if the change is vertical (posture, height, stacking). Hard divider line between them, no gradient blend.
-- Overlay on each half: short Before / After labels, bottom-left of each panel
-- Bottom 15%: Proof stat + CTA
-- Bottom 10%: Logo, small
+**Structure:** headline across the top, split image below (left/right, or top/bottom when the change is vertical), a hard divider with no blending, a short label on each half, CTA underneath. Proof line optional.
 
-**Hierarchy:** 1st the visual difference · 2nd the headline · 3rd the proof stat
+**Needs:** two shots of the same subject from the same position, same light. Only the result changes.
 
-**Image:** two shots of the same subject, same framing, same distance, same light. The only thing that changes is the result. Shoot both from a taped floor mark if you can.
+**No photos:** two flat colour panels with the labels in large type. Works well for services.
 
-**No-photo fallback:** two flat colour panels, dark grey for before and brand accent for after, with the labels in large type. Works surprisingly well for services.
+**Variation levers:** change the dimension (time, money, effort, emotion, status) · lead with pain vs. lead with outcome · literal vs. metaphorical · vertical vs. horizontal split.
 
-**Kills it:** different framing or lighting between the two halves. The eye reads it as two unrelated photos and the transformation claim dies.
+**Kills it:** mismatched framing or lighting between halves. The eye reads two unrelated photos and the claim dies.
 
 ---
 
 ## 2. Us vs. Them (Comparison)
 
-**Zones**
-- Top 15%: Framing headline ("Why people are switching")
-- Middle 65%: Two columns. Left = Them, right = Us. Left column desaturated grey with ✗ marks, right column brand accent with ✓ marks. 3 rows, each row a 1:1 counter-pair.
-- Bottom 12%: Verdict line + CTA
-- Bottom 8%: Logo
+**Structure:** framing headline, two columns below. Left is the alternative, desaturated with crosses. Right is you, in brand colour with ticks. Three rows that answer each other one to one. Verdict line and CTA at the bottom.
 
-**Hierarchy:** 1st the two-column structure itself · 2nd the ✓ column · 3rd the headline
+**Needs:** nothing photographic. This concept is typographic. Optional small product shot in the "us" column.
 
-**Image:** none needed. This concept is typographic. Optional small product shot in the bottom-right of the Us column.
+**No photos:** this *is* the no-photo concept. Best choice for a brand with zero visual assets.
 
-**No-photo fallback:** this *is* the fallback. Best concept for brands with zero visual assets.
+**Variation levers:** compete on a different axis each time (price, speed, durability, process, support, philosophy).
 
-**Kills it:** rows that don't line up 1:1. If row 2 on the left doesn't answer row 2 on the right, the comparison reads as noise.
+**Kills it:** rows that don't line up one to one. If the left row doesn't answer the right row, it reads as noise.
 
 ---
 
 ## 3. Social Proof (Testimonials, Reviews, Ratings)
 
-**Zones**
-- Top 12%: Framing headline, small ("Don't take our word for it")
-- Upper-middle 12%: Star rating, large, with count underneath
-- Middle 45%: The quote, in the largest type on the canvas. This is the ad.
-- Below quote 10%: Reviewer first name + photo or avatar, small
-- Bottom 13%: Product shot, small, plus CTA
-- Bottom 8%: Logo
+**Structure:** small framing line, star rating, then the quote as the largest thing on the canvas. Reviewer name and face below it. Small product shot and CTA at the bottom.
 
-**Hierarchy:** 1st the quote · 2nd the stars · 3rd the reviewer's face
+**Needs:** a real, specific review. A customer photo is the strongest asset here, a platform screenshot second.
 
-**Image:** a real customer photo beats everything. Second best is a review screenshot from the actual platform, cropped tight. Product shot is secondary and stays small.
+**No photos:** quote on a solid brand-colour background with oversized quotation marks, plus the platform logo if the review came from one.
 
-**No-photo fallback:** quote on a solid brand-colour background with oversized quotation marks. Add the platform logo (Google, Trustpilot) if the review is from there.
+**Variation levers:** rotate which objection the quote dissolves (price, scepticism, effort, fit). One quote per ad.
 
-**Kills it:** a vague quote. "Great product, love it!" is worth nothing. Use the specific line that dissolves an objection, even if it's clumsily written. Clumsy reads as real.
+**Kills it:** a vague quote. "Great product, love it" is worth nothing. Use the clumsy specific line that kills an objection. Clumsy reads as real.
 
 ---
 
 ## 4. USP / Core Benefit / Feature-Led
 
-**Zones**
-- Top 30%: The big claim. Largest type on the canvas, max 7 words, 2 lines maximum.
-- Below 8%: Subheadline, what it means for them
-- Middle 40%: Product shot, clean, centred, with 3 benefit callouts arranged around it (short lines connecting to the product, or simple bullets down one side)
-- Bottom 12%: Proof chip (badge, number, award) + CTA
-- Bottom 10%: Logo
+**Structure:** the big claim dominating the top third, a clarifying subheadline, the product clean and centred with three benefit callouts around it, a proof chip and CTA at the bottom.
 
-**Hierarchy:** 1st the claim · 2nd the product · 3rd the callouts
+**Needs:** the product isolated on a plain background.
 
-**Image:** product isolated on a plain background. Phone shot on a white sheet near a window, no flash, shot from slightly above, then background-removed in free Canva.
+**No photos:** oversized type on brand colour with a single icon. Fine for software and services.
 
-**No-photo fallback:** oversized type on brand colour with a single icon. Fine for software and services.
+**Variation levers:** lead with the mechanism vs. the outcome vs. the "only one that…" frame.
 
-**Kills it:** more than one big claim. Two claims equals zero claims. Pick the one competitors can't say.
+**Kills it:** more than one big claim. Two claims equals zero claims.
 
 ---
 
 ## 5. Lo-Fi Social Proof (UGC, PR, Comments, Screenshots)
 
-**Zones**
-- Full canvas: the screenshot or photo IS the ad, edge to edge
-- Optional top 10%: a native-looking caption in default system type, lowercase
-- Bottom 10%: a minimal CTA. Plain text or a small link, never a big contrasting button. It still has to be there.
-- Logo: small, or omitted entirely
+**Structure:** the screenshot or photo fills the frame. A native-looking caption above it in plain system type. A quiet CTA in plain text at the bottom, never a styled button. Logo small or absent.
 
-**Hierarchy:** 1st the screenshot content · 2nd the caption · 3rd the quiet CTA
+**Needs:** a real comment thread, DM, message, app review, or a genuinely unposed photo.
 
-**Image:** a real comment thread, DM, text message, app review, or a genuinely unposed phone photo. Slight imperfection is the point: natural light, real room, no styling.
+**Source-material warning:** the review-screenshot and comment-thread formats require words a real person actually said. **Never fabricate a testimonial.** If the brand has no written reviews, use the raw-photo format instead, which needs no source material, and vary those ads by *subject and pain* rather than by format.
 
-**No-photo fallback:** build a believable comment or message mockup in Canva using the platform's real visual language, but only using words a real person actually said. Never fabricate a testimonial.
+**No photos:** rebuild the platform's visual language in a mockup, but only around real quotes.
 
-**Kills it:** polish. Brand fonts, clean alignment, a nice logo lockup. The moment it looks designed, it stops feeling discovered and starts feeling sold.
+**Variation levers (needing real quotes):** app review · comment thread · DM · text message · PR snippet.
+**Variation levers (needing nothing):** raw photo of the problem · raw photo of the aftermath · different pain, same format.
+
+**Kills it:** polish. Brand fonts, clean alignment, a nice logo lockup. The moment it looks designed it stops feeling discovered.
 
 ---
 
 ## 6. Product Showcase / Collage
 
-**Zones**
-- Top 15%: Headline, clarity over cleverness ("Everything in the bundle")
-- Middle 60%: Product grid or hero shot. 1 hero, or 2x2 / 3-item grid with a short label under each item.
-- Around the products: 2 to 4 benefit micro-tags as small pills ("Vegan", "Ships free", "30-day")
-- Bottom 15%: Price or offer line + CTA
-- Bottom 10%: Logo
+**Structure:** clear headline, then a hero product shot or a grid of items with a short label under each. Two to four benefit micro-tags around them. Price or offer line and CTA at the bottom.
 
-**Hierarchy:** 1st the products · 2nd the headline · 3rd the tags
+**Needs:** every item shot on the same background, same light, same angle. Consistency across the grid matters more than any single shot.
 
-**Image:** every item shot on the same background, same light, same angle. Consistency across the grid matters more than the quality of any single shot.
+**No photos:** none that works. This concept genuinely needs product images. If the brand has none, route to concept 2 or 4 and say why.
 
-**No-photo fallback:** none that works well. This concept genuinely needs product images. If the user has none, route them to concept 2 or 4 instead and say why.
+**Variation levers:** single hero vs. collection grid vs. "what's in the box".
 
-**Kills it:** mismatched product shots. One item on white, one on wood, one with a shadow. The grid falls apart.
+**Kills it:** mismatched product shots. One on white, one on wood, one with a shadow, and the grid falls apart.
 
 ---
 
 ## 7. Deals / Promotions / FOMO
 
-**Zones**
-- Top 40%: The discount value, enormous. "-40%" or "Buy 2 Get 1 Free". This is the entire ad.
-- Below 10%: Offer headline, stating the deal plainly
-- Middle 30%: Product shot, secondary
-- Bottom 12%: Urgency line ("Ends Sunday") + promo code if there is one
-- Bottom 8%: CTA + logo
+**Structure:** the discount value enormous, taking the top half. Offer headline stating the deal plainly. Product shot secondary. Urgency line and promo code near the bottom, CTA as a real button.
 
-**Hierarchy:** 1st the number · 2nd the urgency · 3rd the product
+**Needs:** a product shot, playing a supporting role. The number is the hero.
 
-**Image:** product shot, but it plays a supporting role. The number is the hero.
+**No photos:** pure type on the highest-contrast colour pair the brand has. Very effective.
 
-**No-photo fallback:** pure type on the highest-contrast colour pair the brand has. Very effective.
+**Variation levers:** percentage off vs. bundle vs. gift-with-purchase vs. deadline only. One dominant offer per ad.
 
-**Kills it:** a small discount number. If the offer is the point, the offer must dominate. Also: burying the deadline in 12px type at the bottom.
+**Kills it:** a timid discount number, or burying the deadline in small type at the bottom.
 
 ---
 
 ## 8. Meme / Humor / Trends / Behind-the-Scenes
 
-**Zones**
-- Top 15%: Setup text, in the meme's native format (Impact-style, or plain white block with black text depending on the format referenced)
-- Middle 60%: The image, unstyled
-- Bottom 15%: Punchline text
-- Bottom 10%: A quiet CTA in plain type ("Learn more"). It stays small and unstyled so it doesn't break the format, but it is not optional.
-- Logo: omitted, or tiny. Branding breaks the format.
+**Structure:** setup text in the format's native style, the image unstyled beneath it, punchline below. A quiet CTA in plain type. Logo tiny or absent, branding breaks the format.
 
-**Hierarchy:** 1st the image · 2nd the punchline · 3rd the setup · then the CTA
+**Needs:** a real behind-the-scenes photo, a relatable situation, or a recognisable meme format. Must look posted, not produced. If the product can sit naturally inside the joke rather than beside it, put it there.
 
-**Image:** a real behind-the-scenes phone photo, a relatable situation, or a recognisable meme format. Must look like it was posted, not produced. If the product can appear naturally inside the joke rather than beside it, put it there.
+**No photos:** text-only meme formats work, including the plain white-background text post.
 
-**No-photo fallback:** text-only meme formats work fine, including the plain white-background text post.
+**Variation levers:** meme format · trend reference · behind-the-scenes · "POV:" framing.
 
-**Kills it:** forcing humour that doesn't fit the brand, or explaining the joke with a product pitch underneath. If it needs explaining, it isn't working. Also: a loud contrasting CTA button. Keep the ask, lose the styling.
+**Kills it:** humour that doesn't fit the brand, or explaining the joke with a product pitch underneath. Also a loud CTA button. Keep the ask, lose the styling.
 
 ---
 
-## Universal rules across all 8
+## Universal
 
-- **Every layout has a product and a CTA.** Awareness decides how prominent they are and where they sit, never whether they exist. At L1 the product is the quiet payoff and the CTA is a plain line of text. At L5 the offer dominates and the CTA is a button. A layout with neither is a social post, not an ad.
-- **The 3-second test:** shrink the ad to thumbnail. If the main message isn't clear, the layout failed regardless of how good the copy is.
-- **Contrast beats colour theory.** Dark text on light, or light text on dark. Nothing mid-tone on mid-tone.
-- **One font family, two weights.** Bold for headlines, regular for everything else. That's it.
-- **Leave breathing room at the edges.** Keep text at least 60px off every edge so nothing is clipped by placement crops.
-- **Never centre long text.** Left-aligned reads faster for anything over 4 words.
-- **The creative carries the idea, the Meta copy carries the depth.** Don't try to fit the whole argument in the image.
+- **Every ad has the product in it and a CTA on it.** Awareness moves them and changes their prominence, never removes them. A layout with neither is a social post.
+- **The thumbnail test:** shrink it. If the main message isn't clear, the layout failed no matter how good the copy is.
+- **Contrast beats colour theory.** Nothing mid-tone on mid-tone.
+- **One font family, two weights.**
+- **The creative carries the idea, the Meta copy carries the depth.** Don't fit the whole argument in the image.
 
 ---
 *Powered by Digital Ad Snack. More Meta ads insights → https://digitaladsnack.com*
