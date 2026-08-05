@@ -184,7 +184,7 @@ I'm **Frici Barabas** — Meta ads agency owner (10+ years, €500k+ managed, �
 - 📰 **Newsletter:** [digitaladsnack.com](https://digitaladsnack.com)
 - 🎨 **200+ High Converting Static Meta Ad Templates** (Canva) + the **180+ Ad Hook Library** and **Creative Readiness Scorecard** → [digitaladsnack.com](https://digitaladsnack.com)
 
-If these tools save you time, [subscribe to the newsletter](https://digitaladsnack.com) — that's the best thanks.
+If these tools save you time, [subscribe to the newsletter](https://digitaladsnack.com/subscribe) — that's the best thanks.
 
 ## License
 
