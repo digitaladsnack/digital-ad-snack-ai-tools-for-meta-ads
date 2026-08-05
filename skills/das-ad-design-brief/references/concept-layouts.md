@@ -12,7 +12,7 @@ Awareness decides the *tone* of every one of these (polished vs. deliberately un
 
 **Needs:** two shots of the same subject from the same position, same light. Only the result changes.
 
-**No photos:** two flat colour panels with the labels in large type. Works well for services.
+**If they have no usable image:** two flat colour panels with the labels in large type. Works well for services.
 
 **Variation levers:** change the dimension (time, money, effort, emotion, status) · lead with pain vs. lead with outcome · literal vs. metaphorical · vertical vs. horizontal split.
 
@@ -24,9 +24,9 @@ Awareness decides the *tone* of every one of these (polished vs. deliberately un
 
 **Structure:** framing headline, two columns below. Left is the alternative, desaturated with crosses. Right is you, in brand colour with ticks. Three rows that answer each other one to one. Verdict line and CTA at the bottom.
 
-**Needs:** nothing photographic. This concept is typographic. Optional small product shot in the "us" column.
+**Needs:** a product shot for the "us" column. The layout is text-led, so the image plays a supporting role, but it is not optional. An ad with no product in the frame is a social post.
 
-**No photos:** this *is* the no-photo concept. Best choice for a brand with zero visual assets.
+**If they have no usable image:** no *new* photography required. This is the concept that works from an existing catalogue image, so it's the best choice for a brand with no photoshoot budget. That is not the same as needing no image at all.
 
 **Variation levers:** compete on a different axis each time (price, speed, durability, process, support, philosophy).
 
@@ -40,7 +40,7 @@ Awareness decides the *tone* of every one of these (polished vs. deliberately un
 
 **Needs:** a real, specific review. A customer photo is the strongest asset here, a platform screenshot second.
 
-**No photos:** quote on a solid brand-colour background with oversized quotation marks, plus the platform logo if the review came from one.
+**If they have no usable image:** quote on a solid brand-colour background with oversized quotation marks, plus the platform logo if the review came from one.
 
 **Variation levers:** rotate which objection the quote dissolves (price, scepticism, effort, fit). One quote per ad.
 
@@ -54,7 +54,7 @@ Awareness decides the *tone* of every one of these (polished vs. deliberately un
 
 **Needs:** the product isolated on a plain background.
 
-**No photos:** oversized type on brand colour with a single icon. Fine for software and services.
+**If they have no usable image:** oversized type on brand colour with a single icon. Fine for software and services.
 
 **Variation levers:** lead with the mechanism vs. the outcome vs. the "only one that…" frame.
 
@@ -70,7 +70,7 @@ Awareness decides the *tone* of every one of these (polished vs. deliberately un
 
 **Source-material warning:** the review-screenshot and comment-thread formats require words a real person actually said. **Never fabricate a testimonial.** If the brand has no written reviews, use the raw-photo format instead, which needs no source material, and vary those ads by *subject and pain* rather than by format.
 
-**No photos:** rebuild the platform's visual language in a mockup, but only around real quotes.
+**If they have no usable image:** rebuild the platform's visual language in a mockup, but only around real quotes.
 
 **Variation levers (needing real quotes):** app review · comment thread · DM · text message · PR snippet.
 **Variation levers (needing nothing):** raw photo of the problem · raw photo of the aftermath · different pain, same format.
@@ -85,7 +85,7 @@ Awareness decides the *tone* of every one of these (polished vs. deliberately un
 
 **Needs:** every item shot on the same background, same light, same angle. Consistency across the grid matters more than any single shot.
 
-**No photos:** none that works. This concept genuinely needs product images. If the brand has none, route to concept 2 or 4 and say why.
+**If they have no usable image:** none that works. This concept genuinely needs product images. If the brand has none, route to concept 2 or 4 and say why.
 
 **Variation levers:** single hero vs. collection grid vs. "what's in the box".
 
@@ -99,7 +99,7 @@ Awareness decides the *tone* of every one of these (polished vs. deliberately un
 
 **Needs:** a product shot, playing a supporting role. The number is the hero.
 
-**No photos:** pure type on the highest-contrast colour pair the brand has. Very effective.
+**If they have no usable image:** pure type on the highest-contrast colour pair the brand has. Very effective.
 
 **Variation levers:** percentage off vs. bundle vs. gift-with-purchase vs. deadline only. One dominant offer per ad.
 
@@ -113,7 +113,7 @@ Awareness decides the *tone* of every one of these (polished vs. deliberately un
 
 **Needs:** a real behind-the-scenes photo, a relatable situation, or a recognisable meme format. Must look posted, not produced. If the product can sit naturally inside the joke rather than beside it, put it there.
 
-**No photos:** text-only meme formats work, including the plain white-background text post.
+**If they have no usable image:** text-only meme formats work, including the plain white-background text post.
 
 **Variation levers:** meme format · trend reference · behind-the-scenes · "POV:" framing.
 

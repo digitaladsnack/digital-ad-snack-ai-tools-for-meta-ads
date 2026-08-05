@@ -84,7 +84,7 @@ Then, per ad:
 **Avoid**
 [2–3 bullets. The specific ways this concept fails at this awareness level.]
 
-**If they have no photos:** [one line fallback]
+**If they have no usable image:** [one line fallback]
 ```
 
 Close with which ad to build first and why, in two sentences.
