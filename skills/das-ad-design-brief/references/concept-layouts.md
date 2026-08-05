@@ -89,10 +89,10 @@ The awareness level decides the *style* of what you build (polished vs. lo-fi, l
 **Zones**
 - Full canvas: the screenshot or photo IS the ad, edge to edge
 - Optional top 10%: a native-looking caption in default system type, lowercase
-- Optional bottom 10%: minimal CTA, or nothing at all
+- Bottom 10%: a minimal CTA. Plain text or a small link, never a big contrasting button. It still has to be there.
 - Logo: small, or omitted entirely
 
-**Hierarchy:** 1st the screenshot content · 2nd the caption · that's it
+**Hierarchy:** 1st the screenshot content · 2nd the caption · 3rd the quiet CTA
 
 **Image:** a real comment thread, DM, text message, app review, or a genuinely unposed phone photo. Slight imperfection is the point: natural light, real room, no styling.
 
@@ -144,22 +144,24 @@ The awareness level decides the *style* of what you build (polished vs. lo-fi, l
 
 **Zones**
 - Top 15%: Setup text, in the meme's native format (Impact-style, or plain white block with black text depending on the format referenced)
-- Middle 65%: The image, unstyled
+- Middle 60%: The image, unstyled
 - Bottom 15%: Punchline text
+- Bottom 10%: A quiet CTA in plain type ("Learn more"). It stays small and unstyled so it doesn't break the format, but it is not optional.
 - Logo: omitted, or tiny. Branding breaks the format.
 
-**Hierarchy:** 1st the image · 2nd the punchline · 3rd the setup
+**Hierarchy:** 1st the image · 2nd the punchline · 3rd the setup · then the CTA
 
-**Image:** a real behind-the-scenes phone photo, a relatable situation, or a recognisable meme format. Must look like it was posted, not produced.
+**Image:** a real behind-the-scenes phone photo, a relatable situation, or a recognisable meme format. Must look like it was posted, not produced. If the product can appear naturally inside the joke rather than beside it, put it there.
 
 **No-photo fallback:** text-only meme formats work fine, including the plain white-background text post.
 
-**Kills it:** forcing humour that doesn't fit the brand, or explaining the joke with a product pitch underneath. If it needs explaining, it isn't working. Also: adding a CTA button. This ad is not asking for anything.
+**Kills it:** forcing humour that doesn't fit the brand, or explaining the joke with a product pitch underneath. If it needs explaining, it isn't working. Also: a loud contrasting CTA button. Keep the ask, lose the styling.
 
 ---
 
 ## Universal rules across all 8
 
+- **Every layout has a product and a CTA.** Awareness decides how prominent they are and where they sit, never whether they exist. At L1 the product is the quiet payoff and the CTA is a plain line of text. At L5 the offer dominates and the CTA is a button. A layout with neither is a social post, not an ad.
 - **The 3-second test:** shrink the ad to thumbnail. If the main message isn't clear, the layout failed regardless of how good the copy is.
 - **Contrast beats colour theory.** Dark text on light, or light text on dark. Nothing mid-tone on mid-tone.
 - **One font family, two weights.** Bold for headlines, regular for everything else. That's it.

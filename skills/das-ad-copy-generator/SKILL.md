@@ -11,15 +11,17 @@ Generate Meta ad copy grounded in real audience research, structured around the 
 
 **Foundation first.** Read `.agents/das-meta-ads-context.md` (created by the **das-meta-ads-context** skill) for the brand's product, persona, Voice-of-Customer, positioning, Awareness Map, and awareness x concept map. If it doesn't exist, run `das-meta-ads-context` first — or build it inline via Step 1 below, which produces the same document.
 
-**Awareness sets the depth.** The same concept written for an Unaware reader and a Most Aware reader are different ads. Before generating, read `das-meta-ads-context/references/awareness-levels.md` and let the target level decide copy length, how early the product appears, and how hard the CTA pushes:
+**Awareness sets the depth.** The same concept written for an Unaware reader and a Most Aware reader are different ads. Before generating, read `das-meta-ads-context/references/awareness-levels.md` and let the target level decide copy length, when the product enters, and how hard the CTA pushes:
 
-| Level | Primary text | Product appears | CTA |
+| Level | Primary text | Where the product enters | CTA |
 |---|---|---|---|
-| L1 Unaware | 1–3 lines | not at all, or last | soft or none |
-| L2 Problem-Aware | medium | late, almost an aside | cool |
-| L3 Solution-Aware | long, they will read | mid, as the category answer | warm |
-| L4 Product-Aware | medium | first line | hot |
-| L5 Most Aware | 2–4 lines | first line, with the offer | hottest |
+| L1 Unaware | 1–3 lines | last, closing the thought | soft, curiosity-led ("Learn more") |
+| L2 Problem-Aware | medium | after the problem is named, ~2/3 in | soft ("Read the guide") |
+| L3 Solution-Aware | long, they will read | mid-body, as the category answer | warm ("See how it works") |
+| L4 Product-Aware | medium | first line, by name | hot ("Shop now") |
+| L5 Most Aware | 2–4 lines | first line, next to the offer | hottest ("Shop the sale") |
+
+**Two rules that never bend.** Every ad names the product, and every ad has a CTA. Awareness changes *when the product enters* and *how hard the CTA pushes*, never whether they exist. Copy with no product is a post, not an ad. Copy with no next step wastes the attention it just bought.
 
 ---
 

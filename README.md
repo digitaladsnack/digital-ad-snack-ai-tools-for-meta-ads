@@ -125,12 +125,17 @@ cp -R digital-ad-snack-ai-tools-for-meta-ads/skills/* ~/.claude/skills/
 
 Then just describe what you need — *"set up my meta ads context"*, *"give me ad hooks"*, *"generate meta ad copy for [url]"*, *"design brief for that ad"*, or *"score my ad"* (attach the image). The right skill triggers automatically.
 
-### Option 4 — Claude web app (no terminal)
-On a paid Claude plan you can upload these as Skills in the browser:
+### Option 4 — Claude Desktop or Claude web (no terminal)
+Works on any paid Claude plan. Nothing to install, no command line.
 
-1. Settings → **Capabilities** → turn on **Code execution and file creation**
-2. Settings → **Skills** (or Customize → Skills) → **+** → **Create skill** → upload the skill folder as a `.zip`
-3. Toggle it on. Claude picks it up automatically when you describe a Meta ads task.
+1. **Download the skills.** On this repo click the green **Code** button → **Download ZIP**, then unzip it. Inside `skills/` you'll find one folder per skill.
+2. **Zip each skill folder on its own.** Right-click `das-meta-ads-context` → *Compress* (Mac) or *Send to → Compressed folder* (Windows). Repeat for each skill you want.
+   > The zip must contain the **folder**, with `SKILL.md` inside it. Zipping just the `SKILL.md` file will not work.
+3. **Turn on code execution.** Claude → **Settings → Capabilities** → enable **Code execution and file creation**.
+4. **Upload.** Claude → **Customize** (bottom-left) → **Skills** → **+** → **Upload a skill** → pick your zip. Claude reads the `SKILL.md` and shows you a summary of what it does.
+5. **Toggle it on.** Repeat for each skill.
+
+Start with `das-meta-ads-context`, then add the others as you need them. Once they're on, just describe your task in plain language and Claude picks the right skill by itself.
 
 ## Use without an agent (any AI — free)
 
@@ -142,6 +147,35 @@ On a paid Claude plan you can upload these as Skills in the browser:
 > Skills that have a `references/` folder (context, copy generator, design brief) work best if you paste those files in too, or attach them to the Project.
 
 > The Static Ad Scorer needs an AI that can see images — upload your ad creative when prompted.
+
+## Quickstart: your first five ads
+
+If you've never used a skill before, do exactly this. It takes an afternoon and produces a full launch batch.
+
+**1. Build your context (once, ~40 min).** Type:
+> *"Set up my Meta ads context for [your product URL]"*
+
+Answer the questions. Paste in 3 to 5 real customer reviews if you have them, this single step makes everything downstream better. Approve it when it looks right. You never do this again.
+
+**2. Get your hooks (~10 min).** Type:
+> *"Give me ad hooks for my product"*
+
+You get 32, plus a top five with **one hook per awareness level**. Those five are your five ads.
+
+**3. Write the copy (~30 min).** For each of the five, type:
+> *"Write the copy for the [concept] ad at [awareness level]"*
+
+**4. Get the design brief (~20 min).** For each ad, type:
+> *"Design brief for that ad"*
+
+You get the layout, the photo you need (and how to shoot it on a phone), and where every line of copy goes. Build it in free Canva.
+
+**5. Score before you spend (~10 min).** Upload each finished image:
+> *"Score my ad"*
+
+Fix anything below 13 out of 26. Then launch all five in **one campaign, one ad set**.
+
+**A note on what "awareness level" means:** it's how close someone is to buying. Ad 1 is for people who don't know they have a problem, ad 5 is for people ready to buy today. Running all five means you're advertising to the whole audience instead of only the ~8% already shopping. The `das-meta-ads-context` skill explains this and maps it to your brand.
 
 ## Who's behind this
 

@@ -82,6 +82,8 @@ image placement, text boxes, contrast, export as PNG]
 ## 7. BEFORE YOU LAUNCH
 - [ ] Shrink it to thumbnail size. Is the 1st-read element still readable?
 - [ ] Cover the logo. Is it still obvious what's being offered?
+- [ ] Is the product actually in the frame, in the role this level calls for?
+- [ ] Is there a CTA, at the right pressure for this level?
 - [ ] Does the on-image headline avoid repeating the Meta primary text word-for-word?
 - [ ] Does the visual style match the awareness level? ([level] should look [cue])
 - [ ] Score it with **das-static-ad-scorer** before you spend a cent.
@@ -92,6 +94,7 @@ image placement, text boxes, contrast, export as PNG]
 ## Rules
 
 - **Awareness sets the visual style, concept sets the layout.** An L1 Unaware ad must look unpolished and native even in a Before & After layout. An L5 Most Aware ad must look loud and offer-first. Pull the style cues from `awareness-levels.md`, the structure from `concept-layouts.md`, and reconcile them explicitly in the brief.
+- **Every brief places a product and a CTA.** Awareness moves them, it never removes them. At L1 the product is the quiet resolution in the frame (the fixed half of a split screen) and the CTA is a plain "Learn more" in small type. At L5 the offer dominates and the CTA is a button. If a brief has no product zone or no CTA zone, it is wrong.
 - **One idea per ad.** If the copy contains two competing messages, say which one you're building and suggest the other becomes its own ad.
 - **Never write "add a nice image here".** Every visual instruction must be executable by someone holding a phone in a kitchen. "Shoot the product on a white bedsheet by a window, no flash, from slightly above" is a brief. "Lifestyle imagery" is not.
 - **Assume free tools and no budget.** Default to free Canva, phone photos, and screenshots. Mention paid assets only if the user says they have them.
