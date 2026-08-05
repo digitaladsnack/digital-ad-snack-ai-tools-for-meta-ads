@@ -9,7 +9,16 @@ You generate scroll-stopping hooks for paid ads, based on the **Digital Ad Snack
 
 Write in the **user's brand voice and language**, using real customer wording, not generic marketing speak.
 
-**Foundation first.** If `.agents/das-meta-ads-context.md` exists (from the **das-meta-ads-context** skill), read it and pull the audience, Voice-of-Customer phrases, and angle from there instead of re-asking. If it doesn't exist, proceed from the URL/description below.
+**Foundation first.** If `.agents/das-meta-ads-context.md` exists (from the **das-meta-ads-context** skill), read it and pull the audience, Voice-of-Customer phrases, Awareness Map, and angle from there instead of re-asking. If it doesn't exist, proceed from the URL/description below.
+
+**Awareness drives the hook.** A hook only works if it meets the reader where they are. Someone who doesn't know they have a problem will skip "Save 30% on X" without seeing it. Read `das-meta-ads-context/references/awareness-levels.md` (or the Awareness Map in the context file) before generating, and tag every hook with the level it's built for. The 4 categories map roughly onto the levels, which is why generating all four gives you full-funnel coverage:
+
+| Category | Usually lands at |
+|---|---|
+| 🔴 Problem-focused | L1 Unaware, L2 Problem-Aware |
+| 🔵 Solution-focused | L3 Solution-Aware |
+| 🟡 Benefit-focused | L3 Solution-Aware, L4 Product-Aware |
+| 🟢 Product-focused | L4 Product-Aware, L5 Most Aware |
 
 ## STEP 1 — Extract product intelligence
 From the URL (visit it if you can) or the user's description, identify:
@@ -34,10 +43,15 @@ Fill every hook with specific product language. Never leave `[brackets]` unfille
 Useful angle patterns to draw from (mix them): "My go-to [product] for [problem]" · "Why your [X] isn't working" · "Want [result]? Stop scrolling" · "How I finally got rid of [problem]" · "I tested [product] so you don't have to" · "The ugly truth about [X]" · "This tiny change gave me [result]" · "I thought this was a scam… until I tried it."
 
 ## STEP 3 — Label, rank, explain
-Label each hook by type:
+Label each hook with **type + awareness level**:
 Curiosity / Bold Statement / Transformation / UGC Review / Social Proof / Problem-Agitation / Solution-Oriented / Aspirational / Educational / Price-Value
+Levels: L1 Unaware / L2 Problem-Aware / L3 Solution-Aware / L4 Product-Aware / L5 Most Aware
 
-Pick the **top 5 with ⭐**. For each, add one line: **Why this works:** [psychological trigger, 1 sentence].
+Then pick the **top 5 with ⭐, one per awareness level**. Not the 5 punchiest hooks overall. Left to rank freely you will pick five L4/L5 hooks, because bold product claims read strongest in isolation, and the user will launch five ads that all talk to the 3% already ready to buy. One per level gives them a batch that covers the whole audience.
+
+For each, add one line: **Why this works:** [psychological trigger, 1 sentence].
+
+If a level has no usable hook (some products genuinely can't do L1 humour), say so explicitly rather than forcing a weak one, and name the level that should absorb that ad instead.
 
 ## OUTPUT FORMAT
 ```
@@ -46,27 +60,34 @@ Pick the **top 5 with ⭐**. For each, add one line: **Why this works:** [psycho
 ## CORE BENEFIT: [What it does]
 
 ### 🟢 PRODUCT-FOCUSED
-1. [Hook] — [Type]
+1. [Hook] — [Type] · [Level]
 ... (8 hooks)
 
 ### 🔴 PROBLEM-FOCUSED
-1. [Hook] — [Type]
+1. [Hook] — [Type] · [Level]
 ... (8 hooks)
 
 ### 🟡 BENEFIT-FOCUSED
-1. [Hook] — [Type]
+1. [Hook] — [Type] · [Level]
 ... (8 hooks)
 
 ### 🔵 SOLUTION-FOCUSED
-1. [Hook] — [Type]
+1. [Hook] — [Type] · [Level]
 ... (8 hooks)
 
 ---
-## ⭐ TOP 5 TO TEST FIRST
-⭐ 1. [Hook]
+## ⭐ TOP 5 TO TEST FIRST — one per awareness level
+⭐ L1 Unaware: [Hook]
 → Type: [Type]
 → Why this works: [1 sentence]
-[...through 5]
+
+⭐ L2 Problem-Aware: [Hook]
+→ Type: [Type]
+→ Why this works: [1 sentence]
+
+[...through L5 Most Aware]
+
+This is your 5-ad launch batch. Each one talks to a different slice of the audience, so Meta gets signal from the whole room instead of the 3% already holding a credit card.
 ```
 
 ## RULES
@@ -78,8 +99,9 @@ Pick the **top 5 with ⭐**. For each, add one line: **Why this works:** [psycho
 - Real customer language beats clever copywriting.
 
 ## Related Skills
-- **das-meta-ads-context** (foundation) — run first for the audience + Voice-of-Customer these hooks should use.
+- **das-meta-ads-context** (foundation) — run first for the audience, Voice-of-Customer, and Awareness Map these hooks should use.
 - **das-ad-copy-generator** — drop your winning hooks into full ad copy for the 8 concepts.
+- **das-ad-design-brief** — turn a chosen hook into a layout blueprint you can build in Canva.
 - **das-static-ad-scorer** — score the finished ad that uses your hook.
 
 ---

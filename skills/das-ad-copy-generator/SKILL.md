@@ -9,7 +9,17 @@ Generate Meta ad copy grounded in real audience research, structured around the 
 
 **Pure copy — no paid tools.** Output is text the user pastes into their Canva template manually. Works on any AI account. **The brand voice is the USER's brand**, derived from their URL and answers — never hardcode Digital Ad Snack's voice.
 
-**Foundation first.** Read `.agents/das-meta-ads-context.md` (created by the **das-meta-ads-context** skill) for the brand's product, persona, Voice-of-Customer, positioning, and 8-concept fit map. If it doesn't exist, run `das-meta-ads-context` first — or build it inline via Step 1 below, which produces the same document.
+**Foundation first.** Read `.agents/das-meta-ads-context.md` (created by the **das-meta-ads-context** skill) for the brand's product, persona, Voice-of-Customer, positioning, Awareness Map, and awareness x concept map. If it doesn't exist, run `das-meta-ads-context` first — or build it inline via Step 1 below, which produces the same document.
+
+**Awareness sets the depth.** The same concept written for an Unaware reader and a Most Aware reader are different ads. Before generating, read `das-meta-ads-context/references/awareness-levels.md` and let the target level decide copy length, how early the product appears, and how hard the CTA pushes:
+
+| Level | Primary text | Product appears | CTA |
+|---|---|---|---|
+| L1 Unaware | 1–3 lines | not at all, or last | soft or none |
+| L2 Problem-Aware | medium | late, almost an aside | cool |
+| L3 Solution-Aware | long, they will read | mid, as the category answer | warm |
+| L4 Product-Aware | medium | first line | hot |
+| L5 Most Aware | 2–4 lines | first line, with the offer | hottest |
 
 ---
 
@@ -90,7 +100,9 @@ Rules: every detail specific enough to write an ad from. Mark sourced quotes `[R
 
 1. Load the saved Executive Summary (from `summaries/<brand-slug>.md`, or one the user pasted). If none exists, run Step 1 first.
 
-2. **Ask which concept** (if not stated): list the 8 and note which the fit map recommends. Default to Before & After if the user just says "go".
+2. **Ask which concept and which awareness level** (if not stated): list the 8 and note which the fit map recommends, each with the level it's aimed at. Default to Before & After at L3 Solution-Aware if the user just says "go".
+
+   If the user asks for a concept at a level the matrix marks `skip` (for example Deals/FOMO at L1 Unaware), build it anyway but open with one line naming the mismatch and what it will cost them: *"Heads up: a discount ad shown to people who don't know they have this problem gets scrolled past. This copy works, but it belongs on a warm audience. Want an L1 version too?"* State it once, then get on with the work.
 
 3. **Ask how many of each element.** Open `references/concept-copy-frameworks.md`, find that concept's element list, and ask the user for quantities — offer sensible defaults so they can just say "defaults". Example for Before & After:
    > "How many of each do you want? (or say 'defaults')
@@ -106,6 +118,7 @@ Rules: every detail specific enough to write an ad from. Mark sourced quotes `[R
 ```
 # [CONCEPT] COPY KIT — [Product]   ([language])
 Angle: [from the fit map]
+Awareness level: [L1–L5] — [what this reader already knows, 1 line]
 
 ## ON-IMAGE ELEMENTS (paste into the Canva template)
 ### Headlines (×N)
@@ -124,7 +137,9 @@ Angle: [from the fit map]
 ### Descriptions (×N)   [≤90 char]
 ```
 
-5. Close with: *"Mix and match these into your template. Want another concept, or more of any element?"*
+5. Close with: *"Mix and match these into your template. Want another concept, or more of any element?"* If the user has now generated copy for two or more concepts at the same awareness level, point it out and suggest the level they're missing.
+
+6. Hand off to design: *"Want the layout too? Run **das-ad-design-brief** with this copy kit and I'll tell you exactly where each line goes and what image you need."*
 
 ---
 
@@ -136,8 +151,9 @@ Angle: [from the fit map]
 - The output's brand voice = the user's brand, not DAS.
 
 ## Related Skills
-- **das-meta-ads-context** (foundation) — run first; provides the persona, Voice-of-Customer, and 8-concept fit map this skill relies on.
-- **das-ad-hook-generator** — turn the chosen angle into 32 hook variations.
+- **das-meta-ads-context** (foundation) — run first; provides the persona, Voice-of-Customer, Awareness Map, and awareness x concept map this skill relies on.
+- **das-ad-hook-generator** — turn the chosen angle into 32 hook variations, tagged by awareness level.
+- **das-ad-design-brief** — turn this copy kit into a layout blueprint + shot list so a non-designer can build the image.
 - **das-static-ad-scorer** — score the finished ad image before you spend.
 
 ---
