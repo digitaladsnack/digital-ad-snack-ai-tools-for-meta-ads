@@ -26,7 +26,7 @@ Ask in percentages wherever you can. That is how small shop owners know their co
 Send this form, translated into the user's language:
 
 ```
-To build your profit model I need 10 quick answers.
+To build your profit model I need 11 quick answers.
 Percentages are fine. All % are of your selling price WITHOUT VAT, unless noted.
 
 1. Average order value: what a customer pays per order, VAT included
@@ -42,8 +42,9 @@ Percentages are fine. All % are of your selling price WITHOUT VAT, unless noted.
    None of these? Leave it blank.
 8. Is your business VAT-registered? (yes / no)
 9. Does your Meta pixel send prices with VAT, without VAT, or not sure?
-10. Monthly Meta budget, and the profit you want left after ads
-    (% of revenue; 10% is a sane first target if you have no idea)
+10. Monthly Meta budget
+11. Profit target: how much of your revenue do you want left
+    after product, shipping, fees AND ads? (% of revenue)
 
 Don't know one? Write "don't know" and I'll mark a clearly labelled placeholder.
 ```
@@ -51,6 +52,8 @@ Don't know one? Write "don't know" and I'll mark a clearly labelled placeholder.
 **Pre-fill only what you actually know.** If `.agents/das-meta-ads-context.md` or the conversation already holds an answer, put it in the form as a pre-filled line for them to confirm. If they gave a product URL, you may read the price from the page and pre-fill question 1 ("Price on the page: 540 lei with VAT. Is that your average order, or do customers buy more than one?"). Never pre-fill a cost.
 
 **Blank country = no location fee.** Don't ask again.
+
+**The profit target is the owner's call, never yours.** It sets the target ROAS, so never fill it in silently. If they answer "don't know", explain in one line what it means ("of every €100 of sales, how many euro should stay with you after everything, ads included"), offer 10% as a starting point for a small shop, and mark it **ASSUMED** in the output until they confirm or change it.
 
 **Missing numbers after they reply.** Never invent the average order value or the product cost, those two decide everything: ask again for just that one. For payment fees or returns you may use a placeholder (2% payment fees, 3% returns), marked **ASSUMED** in the output, and tell them which one to replace first.
 
