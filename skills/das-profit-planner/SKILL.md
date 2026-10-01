@@ -17,30 +17,48 @@ Ads Manager only sees the ad account. It knows what was paid to Meta and what ca
 
 **Answer in the user's language and currency.**
 
-## STEP 1: Collect the numbers
+## STEP 1: Ask first, calculate nothing
 
-Ask for these in one short message. Most shop owners can answer in five minutes from their shop admin, one supplier invoice and one Meta invoice.
+**Your first reply is the question form below and nothing else.** No calculations, no illustration tables, no "if your margin is 40%" examples, no list of assumptions. Estimates before the shop's own numbers are noise, and they teach the owner to trust a number that isn't theirs. Wait for the answers.
 
-| Input | What it means |
-|---|---|
-| **Average order value (AOV)** | What a customer actually pays per order, after discounts, including VAT and any shipping they pay. Last 90 days from the shop admin is ideal. |
-| **VAT rate** | The rate on the customer's receipt. Several EU countries? One rate per market. |
-| **Product cost per order** | What the goods in an average order cost you (COGS). If they only know their gross margin %, accept that instead. |
-| **Shipping and packaging per order** | What *you* pay the courier, plus box, filler, pick and pack. |
-| **Payment fees** | Card or payment provider fee: % per transaction, plus any fixed fee. |
-| **Returns and refunds** | Share of net revenue lost to returns, refunds and return shipping. |
-| **Countries the ads run in** | Where the ads are *delivered*, not where the business sits. Several? Rough share of spend per country. |
-| **Can you reclaim the VAT on Meta's invoice?** | Yes if the business is VAT-registered (reverse charge). If not, the VAT rate printed on their Meta invoice. |
-| **Monthly ad budget** | What they plan to spend on Meta per month, as it will show in Ads Manager. |
-| **Profit target** | What they want left after ads, as % of net revenue. If they have no idea, suggest 10% and say why: it is a sane first target for a small shop, not a rule. |
+Ask in percentages wherever you can. That is how small shop owners know their costs: "the product is about 40% of the price", "the courier is around 8%". Accept an amount instead whenever they give one.
 
-**Missing numbers.** Never invent the product cost or the AOV, those two decide everything. Without them, stop and ask. For payment fees or returns you may use a placeholder if the user truly doesn't know (2% payment fees, 3% returns), but mark every placeholder **ASSUMED** in the output and tell them which one to replace first.
+Send this form, translated into the user's language:
 
-## STEP 2: The VAT check (do not skip)
+```
+To build your profit model I need 10 quick answers.
+Percentages are fine. All % are of your selling price WITHOUT VAT, unless noted.
+
+1. Average order value: what a customer pays per order, VAT included
+   (last 90 days from your shop admin is ideal)
+2. VAT rate on your receipts (e.g. 21% Romania, 27% Hungary, 19% Germany, 20% Austria)
+3. Product cost: % of the price, or your gross margin %
+4. Shipping and packaging you pay: % of the price, or an amount per order
+5. Payment fees: % per transaction (card, PayPal, cash on delivery fee)
+6. Returns and refunds: % of revenue you lose
+7. Countries your ads run in.
+   Meta adds a location fee on top of your ad spend in:
+   Austria 5% · Turkey 5% · France 3% · Italy 3% · Spain 3% · UK 2%
+   None of these? Leave it blank.
+8. Is your business VAT-registered? (yes / no)
+9. Does your Meta pixel send prices with VAT, without VAT, or not sure?
+10. Monthly Meta budget, and the profit you want left after ads
+    (% of revenue; 10% is a sane first target if you have no idea)
+
+Don't know one? Write "don't know" and I'll mark a clearly labelled placeholder.
+```
+
+**Pre-fill only what you actually know.** If `.agents/das-meta-ads-context.md` or the conversation already holds an answer, put it in the form as a pre-filled line for them to confirm. If they gave a product URL, you may read the price from the page and pre-fill question 1 ("Price on the page: 540 lei with VAT. Is that your average order, or do customers buy more than one?"). Never pre-fill a cost.
+
+**Blank country = no location fee.** Don't ask again.
+
+**Missing numbers after they reply.** Never invent the average order value or the product cost, those two decide everything: ask again for just that one. For payment fees or returns you may use a placeholder (2% payment fees, 3% returns), marked **ASSUMED** in the output, and tell them which one to replace first.
+
+## STEP 2: The VAT check (when the pixel answer is "not sure")
 
 Meta's ROAS is the purchase value **the pixel sends** divided by ad spend. Some shops send the checkout total with VAT. Others send the subtotal without it. The setup decides, not Meta, and a wrong guess moves the break-even ROAS by the whole VAT rate.
 
-Ask the user to check one recent order:
+Only needed if they answered "not sure" to question 9. Ask them to check one recent order:
 
 Step 1: Open one recent order in the shop admin. Note the total with VAT and the total without VAT.
 
@@ -88,7 +106,9 @@ If you can run code, calculate with code. If not, calculate line by line and sho
 ```
 AOV           = what the customer pays per order (incl. VAT)
 Net revenue   = AOV / (1 + VAT rate)
-Payment fees  = fee % x AOV + fixed fee        (card fees are charged on the full amount)
+Product cost  = product cost % x Net revenue      (or (1 - gross margin %) x Net revenue, or the amount given)
+Shipping      = shipping % x Net revenue          (or the amount per order given)
+Payment fees  = fee % x AOV + fixed fee           (card fees are charged on the full amount)
 Returns       = returns % x Net revenue
 Profit per order before ads (C)
               = Net revenue - Product cost - Shipping & packaging - Payment fees - Returns

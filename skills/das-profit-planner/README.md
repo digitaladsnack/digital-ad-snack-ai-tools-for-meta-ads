@@ -27,7 +27,7 @@ You get:
 Built for Meta ads in Europe: VAT per country, Meta's location fees, euro budgets, several markets. Ecommerce only.
 
 ## How to use
-Say *"what's my break-even ROAS"* or *"build my profit model"*. Have your average order value, VAT rate, product cost per order and shipping cost ready, plus the countries your ads run in and one Meta invoice. Works in any AI. With a code tool it calculates with code; without one it shows every line of the math so you can check it.
+Say *"what's my break-even ROAS"* or *"build my profit model"*. It starts with one short question form, no guessing. Percentages are fine, that's how most shop owners know their costs: product cost, shipping, payment fees and returns as % of the price. It also lists the countries where Meta adds a location fee, so you just say where your ads run. Works in any AI. With a code tool it calculates with code; without one it shows every line of the math so you can check it.
 
 It never touches your ad account. Numbers in, numbers out.
 
