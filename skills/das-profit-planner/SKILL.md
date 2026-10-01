@@ -1,17 +1,17 @@
 ---
 name: das-profit-planner
-description: Build an ecommerce profit model for Meta ads BEFORE spending, from the user's own numbers. Takes average order value, VAT, product cost, shipping, payment fees and returns, then returns what one order really leaves you, the break-even CPA, the break-even ROAS exactly as Ads Manager will show it (with or without VAT, depending on what the pixel sends), a target ROAS for the profit the user wants, a monthly budget scenario table, a check on whether the budget can feed Meta's learning phase, and clear kill and scale lines. Built for European shops: VAT per country, euro budgets, several markets. Use whenever the user asks for break-even ROAS, target ROAS, target CPA, how much they can pay for a purchase, whether their ROAS is profitable, how much budget they need, or a profit plan before launching Meta ads. Triggers on: "break-even roas", "target roas", "what roas do i need", "how much can i pay per purchase", "is my roas profitable", "profit model", "profit planner", "ads budget plan", "ecommerce profit calculation", "poas".
+description: Build an ecommerce profit model for Meta ads in Europe BEFORE spending, from the user's own numbers. Takes average order value, VAT, product cost, shipping, payment fees, returns and the countries the ads run in, then adds Meta's own European costs (the location fees in Austria, France, Italy, Spain, the UK and Turkey, and the VAT on Meta's invoice for businesses that cannot reclaim it). Returns what one order really leaves you, the break-even CPA and break-even ROAS exactly as Ads Manager will show them, a target ROAS, a monthly budget table, a learning phase check, and suggested kill and scale lines. Use whenever the user asks for break-even ROAS, target ROAS, target CPA, Meta ads VAT, Meta location fees, Meta ads costs in Europe, how much they can pay for a purchase, whether their ROAS is profitable, or a profit plan before launching Meta ads. Triggers on: "break-even roas", "target roas", "what roas do i need", "how much can i pay per purchase", "is my roas profitable", "meta ads vat", "meta location fee", "meta ads fees europe", "profit model", "profit planner", "ads budget plan", "ecommerce profit calculation", "poas".
 ---
 
 # DAS Profit Planner
 
-You build a **profit model for a Meta ads ecommerce account before the money is spent.** The user gives you their numbers; you return the few numbers they need to judge every campaign afterwards: what one order leaves behind, the break-even CPA, the break-even ROAS as Ads Manager will show it, a target ROAS, and what their budget can realistically do.
+You build a **profit model for a Meta ads ecommerce account in Europe, before the money is spent.** The user gives you their numbers; you return the few numbers they need to judge every campaign afterwards: what one order leaves behind, the break-even CPA, the break-even ROAS as Ads Manager will show it, a target ROAS, and what their budget can realistically do.
 
-Ads Manager only sees the ad account. It knows what was paid to Meta and what came back through the pixel. It does not know the VAT, the product cost, the courier invoice or the card fees. This skill adds those back in, so a ROAS stops being a ratio and becomes money.
+Ads Manager only sees the ad account. It knows what was paid to Meta and what came back through the pixel. It does not know the VAT, the product cost, the courier invoice or the card fees. And its "Amount Spent" column leaves out two costs Meta itself charges European advertisers: the location fee and, for some businesses, the VAT on Meta's invoice. This skill adds all of it back in, so a ROAS stops being a ratio and becomes money.
 
 **Ecommerce only.** One purchase, one order value. For lead generation, say this skill does not fit and stop.
 
-**Never touch the ad account.** You work only from numbers the user types or pastes (shop admin totals, an Ads Manager CSV export, an invoice). Never ask for ad account access, never connect to the Meta API, never suggest changing budgets inside the account for them. The user makes every change by hand.
+**Never touch the ad account.** You work only from numbers the user types or pastes (shop admin totals, an Ads Manager CSV export, a Meta invoice). Never ask for ad account access, never connect to the Meta API, never suggest changing budgets inside the account for them. The user makes every change by hand.
 
 **Foundation (optional).** If `.agents/das-meta-ads-context.md` exists (from the **das-meta-ads-context** skill), read it for the product, price and markets so you don't re-ask. On Claude Desktop, claude.ai, ChatGPT or Gemini there is no file to read: ask the user to paste their saved context if they have one, otherwise just ask the questions below.
 
@@ -19,7 +19,7 @@ Ads Manager only sees the ad account. It knows what was paid to Meta and what ca
 
 ## STEP 1: Collect the numbers
 
-Ask for these in one short message. Most shop owners can answer in five minutes from their shop admin and one supplier invoice.
+Ask for these in one short message. Most shop owners can answer in five minutes from their shop admin, one supplier invoice and one Meta invoice.
 
 | Input | What it means |
 |---|---|
@@ -29,7 +29,9 @@ Ask for these in one short message. Most shop owners can answer in five minutes 
 | **Shipping and packaging per order** | What *you* pay the courier, plus box, filler, pick and pack. |
 | **Payment fees** | Card or payment provider fee: % per transaction, plus any fixed fee. |
 | **Returns and refunds** | Share of net revenue lost to returns, refunds and return shipping. |
-| **Monthly ad budget** | What they plan to spend on Meta per month. |
+| **Countries the ads run in** | Where the ads are *delivered*, not where the business sits. Several? Rough share of spend per country. |
+| **Can you reclaim the VAT on Meta's invoice?** | Yes if the business is VAT-registered (reverse charge). If not, the VAT rate printed on their Meta invoice. |
+| **Monthly ad budget** | What they plan to spend on Meta per month, as it will show in Ads Manager. |
 | **Profit target** | What they want left after ads, as % of net revenue. If they have no idea, suggest 10% and say why: it is a sane first target for a small shop, not a rule. |
 
 **Missing numbers.** Never invent the product cost or the AOV, those two decide everything. Without them, stop and ask. For payment fees or returns you may use a placeholder if the user truly doesn't know (2% payment fees, 3% returns), but mark every placeholder **ASSUMED** in the output and tell them which one to replace first.
@@ -50,7 +52,36 @@ Until they check, calculate **both** versions and label them. If they sell outsi
 
 **Selling to several EU countries:** once cross-border B2C sales pass €10,000 a year, the buyer's country VAT applies (the EU One-Stop-Shop rules), so one market can have a different break-even than another. Build one column per market. Tell the user to confirm the rates with their accountant, rates change (Romania went from 19% to 21% in August 2025).
 
-## STEP 3: Calculate
+## STEP 3: What one euro of "Amount Spent" really costs
+
+"Amount Spent" in Ads Manager is not the full bill. Two European costs sit on the invoice, outside the column the ROAS is calculated on.
+
+**Meta's location fee.** Since July 1, 2026, Meta passes local digital services taxes on to advertisers, as a percentage on top of ad spend in the country where the ad is **delivered**. A Dutch shop showing ads in France pays the French fee. There is no opt-out. Rates as of July 2026:
+
+| Country the ad is delivered in | Location fee |
+|---|---|
+| Austria | 5% |
+| Turkey | 5% |
+| France | 3% |
+| Italy | 3% |
+| Spain | 3% |
+| United Kingdom | 2% |
+| Everywhere else | 0% |
+
+Tell the user to check Meta's Business Help Center for the current list, because rates and countries can change. Ads in several countries: weight the fee by each country's share of spend (Ads Manager, Breakdown by Country).
+
+**VAT on Meta's invoice.** A VAT-registered business reverse-charges it and gets it back, so it costs nothing. A business that is not VAT-registered (often the smallest advertisers) pays it on the whole invoice, ad spend plus location fee, and never gets it back.
+
+```
+Cost multiplier (k) = (1 + location fee) x (1 + Meta invoice VAT, only if it cannot be reclaimed)
+Real cost of the monthly budget = Budget x k
+```
+
+Example: ads delivered in Austria, VAT-registered business: k = 1.05. Every €100 of Amount Spent costs €105.
+
+If k is 1 (no fee country, VAT reclaimed), say so in one line and move on.
+
+## STEP 4: Calculate
 
 If you can run code, calculate with code. If not, calculate line by line and show the working, so the user can check every step. Round money to 2 decimals and ratios to 2 decimals.
 
@@ -64,13 +95,14 @@ Profit per order before ads (C)
 Contribution margin = C / Net revenue
 
 V             = the purchase value the pixel sends per order (AOV if with VAT, Net revenue if without)
+k             = cost multiplier from STEP 3
 
-Break-even CPA                    = C
-Break-even ROAS (net revenue)     = Net revenue / C   (= 1 / contribution margin)
-Break-even ROAS (as Ads Manager shows it) = V / C
+Break-even ROAS (net revenue, before Meta's fees) = Net revenue / C   (= 1 / contribution margin)
 
-Allowed ad cost per order at target = C - (profit target % x Net revenue)
-Target CPA                        = allowed ad cost per order
+Break-even CPA  (as Ads Manager shows it) = C / k
+Break-even ROAS (as Ads Manager shows it) = V / Break-even CPA
+
+Target CPA  (as Ads Manager shows it) = (C - profit target % x Net revenue) / k
 Target ROAS (as Ads Manager shows it) = V / Target CPA
 ```
 
@@ -78,19 +110,21 @@ If the target CPA comes out at zero or below, the target is impossible at this p
 
 **Use contribution margin, not gross margin.** Gross margin only takes out the product cost. Shipping, fees and returns are real costs on every order, and leaving them out makes the break-even look lower than it is.
 
-## STEP 4: Budget scenarios
+**Several markets?** Repeat the calculation per market. VAT, the location fee and often shipping differ, so Austria and Romania can need two different ROAS lines for the same product.
 
-For the monthly budget B, build a table at four reported ROAS levels: break-even, target, and two higher round numbers (for example 4x and 5x).
+## STEP 5: Budget scenarios
+
+For the monthly budget B (as Ads Manager shows it), build a table at four reported ROAS levels: break-even, target, and two higher round numbers (for example 4x and 5x).
 
 ```
 Orders per month       = B x ROAS / V
 Net revenue per month  = Orders x Net revenue per order
-Profit after ads       = Orders x C - B
+Profit after ads       = Orders x C - B x k
 ```
 
 This is the table the user keeps open while the campaign runs.
 
-## STEP 5: Can the budget feed Meta?
+## STEP 6: Can the budget feed Meta?
 
 Meta's learning phase needs roughly 50 optimization events per ad set in 7 days. Show:
 
@@ -101,7 +135,7 @@ Purchases the real weekly budget buys at target     = (B / 4.33) / Target CPA
 
 Most small shops land far below 50. That is normal, not a failure. Say what it means in practice: keep the budget in **one** campaign and **one** ad set instead of splitting it, judge results on 7 to 14 days rather than daily swings, and expect the numbers to bounce while the volume is low.
 
-## STEP 6: Suggested kill and scale lines
+## STEP 7: Suggested kill and scale lines
 
 Turn the numbers into suggested lines the user can apply by hand in Ads Manager, using the ROAS version their pixel actually reports. Present them as **suggestions, not rules**:
 
@@ -123,17 +157,18 @@ Say it plainly: these usually work as a starting point, but every account behave
    minus payment fees     €21.02
    minus returns          €19.80   <- what one order leaves before ads
    ```
-3. **The three numbers to watch,** big and clear: break-even CPA, break-even ROAS as Ads Manager shows it, target ROAS. If the VAT check isn't done yet, show both versions side by side.
-4. **Budget scenarios** table (STEP 4).
-5. **Can your budget feed Meta?** (STEP 5), two or three sentences.
-6. **Suggested kill, hold and scale lines** (STEP 6), labeled as suggestions.
-7. **The one lever that moves the break-even most** for this shop, in one or two sentences. Usually it is AOV (bundles, thresholds for free shipping) or product cost, rarely the ads.
+3. **What €1 of Amount Spent really costs** (STEP 3), one line: the location fee, the Meta invoice VAT if any, and k.
+4. **The three numbers to watch,** big and clear: break-even CPA, break-even ROAS as Ads Manager shows it, target ROAS. If the VAT check isn't done yet, show both versions side by side.
+5. **Budget scenarios** table (STEP 5).
+6. **Can your budget feed Meta?** (STEP 6), two or three sentences.
+7. **Suggested kill, hold and scale lines** (STEP 7), labeled as suggestions.
+8. **The one lever that moves the break-even most** for this shop, in one or two sentences. Usually it is AOV (bundles, thresholds for free shipping) or product cost, rarely the ads.
 
 Then offer to save it. With a filesystem, write `.agents/das-profit-model.md` with the inputs, the results and today's date, so the other DAS skills and future runs can read it. Without one, tell the user to save the output as a note and paste it back next time.
 
 ## Worked example
 
-A shop sells a €49 product in Romania (21% VAT). Product cost €14, shipping and packaging €4.50, payment fees 2%, returns 3%, budget €600 a month, target 10% profit after ads. The pixel sends the price **with** VAT.
+A shop sells a €49 product in Romania (21% VAT). Product cost €14, shipping and packaging €4.50, payment fees 2%, returns 3%, budget €600 a month, target 10% profit after ads. Ads run only in Romania (no location fee), the business is VAT-registered, so k = 1. The pixel sends the price **with** VAT.
 
 - Net revenue per order: 49 / 1.21 = **€40.50**
 - Payment fees: 0.02 x 49 = €0.98. Returns: 0.03 x 40.50 = €1.22
@@ -153,10 +188,13 @@ Learning phase: one ad set needs about 50 x €15.75 = €788 a week. €600 a m
 
 The trap this example shows: an owner who only counts the product cost sees a 65% margin and a 1.53x break-even. The real line in Ads Manager is 2.47x. Every ROAS between those two looks like a win and loses money on every order.
 
+**Same product, sold and advertised in Austria.** VAT is 20%, so net revenue is €40.83 and one order leaves €20.13. Without Meta's fee the break-even ROAS would be 2.43x. With the 5% Austrian location fee, k = 1.05: break-even CPA in Ads Manager drops to **€19.17**, break-even ROAS rises to **2.56x**, and the target moves from 3.05x to **3.21x**. Same shop, same product, a different line per country.
+
 ## RULES
 - Show every formula with the user's numbers in it. A number they cannot check is a number they will not trust.
 - Never present a placeholder as a fact. ASSUMED, every time.
 - Never fill in benchmarks as if they were the user's numbers. Industry ROAS averages say nothing about this shop's break-even.
+- Location fees and VAT rates change. Give the date of the rates you use and point to the source to check.
 - This is first-order math. If the user has real repeat-purchase data, say the allowed CPA can be higher for new customers, and that it needs their own numbers, not a guess.
 - Before overheads. Rent, salaries and software come out of the profit after ads. Say so once, briefly.
 
@@ -166,4 +204,4 @@ The trap this example shows: an owner who only counts the product cost sees a 65
 - **das-static-ad-scorer**: score each creative before it starts spending against your kill line.
 
 ---
-*Built on the profit ladder from Digital Ad Snack issue #130, "The Ladder From ROAS to Profit" (https://digitaladsnack.com/p/the-ladder-from-roas-to-profit). More Meta ads insights → https://digitaladsnack.com*
+*Built on the profit ladder from Digital Ad Snack issue #130, "The Ladder From ROAS to Profit" (https://digitaladsnack.com/p/the-ladder-from-roas-to-profit), and the European cost layers from #127, "Meta Ads in Europe Are Getting More Expensive" (https://digitaladsnack.com/p/meta-ads-in-europe-are-getting-more-expensive). More Meta ads insights → https://digitaladsnack.com*

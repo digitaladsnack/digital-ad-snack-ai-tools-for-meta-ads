@@ -13,6 +13,8 @@ It works from what the customer pays and walks down one line at a time:
 4. Payment fees
 5. Returns
 
+Then it adds what Meta itself charges European advertisers on top of "Amount Spent": the **location fee** in Austria (5%), Turkey (5%), France, Italy, Spain (3%) and the UK (2%), and the **VAT on Meta's invoice** if your business can't reclaim it.
+
 You get:
 
 - **Break-even CPA:** the most you can pay for one purchase
@@ -22,15 +24,15 @@ You get:
 - **A learning phase check:** can your budget feed Meta enough purchases
 - **Suggested kill, hold and scale lines.** A starting point, not a verdict: you know your account, the AI doesn't
 
-Built for European shops: VAT per country, euro budgets, several markets. Ecommerce only.
+Built for Meta ads in Europe: VAT per country, Meta's location fees, euro budgets, several markets. Ecommerce only.
 
 ## How to use
-Say *"what's my break-even ROAS"* or *"build my profit model"*. Have your average order value, VAT rate, product cost per order and shipping cost ready. Works in any AI. With a code tool it calculates with code; without one it shows every line of the math so you can check it.
+Say *"what's my break-even ROAS"* or *"build my profit model"*. Have your average order value, VAT rate, product cost per order and shipping cost ready, plus the countries your ads run in and one Meta invoice. Works in any AI. With a code tool it calculates with code; without one it shows every line of the math so you can check it.
 
 It never touches your ad account. Numbers in, numbers out.
 
 ## Based on
-The profit ladder from **[Digital Ad Snack #130: The Ladder From ROAS to Profit](https://digitaladsnack.com/p/the-ladder-from-roas-to-profit)**.
+The profit ladder from **[Digital Ad Snack #130: The Ladder From ROAS to Profit](https://digitaladsnack.com/p/the-ladder-from-roas-to-profit)** and the European cost layers from **[#127: Meta Ads in Europe Are Getting More Expensive](https://digitaladsnack.com/p/meta-ads-in-europe-are-getting-more-expensive)**.
 
 ## Related skills
 - [das-meta-ads-context](../das-meta-ads-context) (reads your product and price from it) · [das-ad-hook-generator](../das-ad-hook-generator) · [das-ad-copy-generator](../das-ad-copy-generator) · [das-static-ad-scorer](../das-static-ad-scorer) (score each ad before it spends against your kill line)
