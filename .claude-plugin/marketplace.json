@@ -5,14 +5,14 @@
     "url": "https://digitaladsnack.com"
   },
   "metadata": {
-    "description": "AI tools for Meta ads \u2014 buyer persona, awareness levels, ad copy generation, hook writing, design briefs, and creative scoring",
-    "version": "1.1.0",
+    "description": "AI tools for Meta ads: buyer persona, awareness levels, ad copy generation, hook writing, design briefs, creative scoring, and break-even ROAS planning",
+    "version": "1.2.0",
     "repository": "https://github.com/digitaladsnack/digital-ad-snack-ai-tools-for-meta-ads"
   },
   "plugins": [
     {
       "name": "das-meta-ads-skills",
-      "description": "AI skills for Meta (Facebook/Instagram) ads by Digital Ad Snack: a das-meta-ads-context foundation skill (persona, Voice-of-Customer, the 5 problem awareness levels) plus ad copy generation across 8 evergreen static ad concepts, a 180+ ad hook generator, a design brief generator for non-designers, and a 26-point static ad creative scorer. Free, works on any AI agent.",
+      "description": "AI skills for Meta (Facebook/Instagram) ads by Digital Ad Snack: a das-meta-ads-context foundation skill (persona, Voice-of-Customer, the 5 problem awareness levels) plus ad copy generation across 8 evergreen static ad concepts, a 180+ ad hook generator, a design brief generator for non-designers, a 26-point static ad creative scorer, and a profit planner for break-even and target ROAS. Free, works on any AI agent.",
       "source": "./"
     }
   ]
