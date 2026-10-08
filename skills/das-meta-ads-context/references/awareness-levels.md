@@ -16,7 +16,7 @@ Eugene Schwartz mapped these in *Breakthrough Advertising* (1966). They describe
 |---|---|---|
 | 1. Unaware | Don't know they have a problem | ~70% |
 | 2. Problem-Aware | Feel the itch, haven't named it | ~15% |
-| 3. Solution-Aware | Researching categories of solution | ~10% |
+| 3. Solution-Aware | Researching categories of solution | ~7% |
 | 4. Product-Aware | Know you exist, deciding if you're worth it | ~5% |
 | 5. Most Aware | Ready, need a reason to act now | ~3% |
 
@@ -70,7 +70,7 @@ Eugene Schwartz mapped these in *Breakthrough Advertising* (1966). They describe
 
 ---
 
-## Level 3: Solution-Aware (~10%)
+## Level 3: Solution-Aware (~7%)
 
 **Mindset:** actively researching. Comparing *categories* of solution, not yet brands. "Should I fix this with X or with Y?"
 
@@ -188,11 +188,11 @@ Given a level and a count, select concepts like this:
 
 | Level | Copy length | Product in the visual | Product in the copy | CTA |
 |---|---|---|---|---|
-| L1 Unaware | 1–3 lines | the resolution, not the hero (split-screen payoff) | last, closing the thought | soft, curiosity-led ("Learn more") |
+| L1 Unaware | 1 to 3 lines | the resolution, not the hero (split-screen payoff) | last, closing the thought | soft, curiosity-led ("Learn more") |
 | L2 Problem-Aware | medium | shares the frame with the problem | after the problem is named, ~2/3 in | soft ("Read the guide") |
 | L3 Solution-Aware | long | one labelled side of the comparison | mid-body, as the category answer | warm ("See how it works") |
 | L4 Product-Aware | medium | the hero | first line, by name | hot ("Shop now") |
-| L5 Most Aware | 2–4 lines | present, but the offer outranks it | first line, next to the offer | hottest ("Shop the sale") |
+| L5 Most Aware | 2 to 4 lines | present, but the offer outranks it | first line, next to the offer | hottest ("Shop the sale") |
 
 The product is in every row. The CTA is in every row. Only the timing and the pressure move.
 

@@ -64,7 +64,7 @@ Eugene Schwartz mapped these in 1966 and nothing since has replaced them. They d
 |---|---|---|
 | **1. Unaware** | Don't know they have a problem | ~70% |
 | **2. Problem-Aware** | Feel the itch, haven't named it | ~15% |
-| **3. Solution-Aware** | Researching categories of solution | ~10% |
+| **3. Solution-Aware** | Researching categories of solution | ~7% |
 | **4. Product-Aware** | Know you exist, deciding if you're worth it | ~5% |
 | **5. Most Aware** | Ready, need a reason to act now | ~3% |
 
